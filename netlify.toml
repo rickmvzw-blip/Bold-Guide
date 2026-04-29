@@ -1,0 +1,8 @@
+# Bold Guide — Netlify deploy config
+[build]
+  publish = "."
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200

@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Bold Guide — Data. Tools. Results.</title>
+  <meta name="description" content="Bold Guide sells premium digital tools and knowledge products for people who move fast. Lead enrichment APIs, AI prompt packs, and data software."/>
+  <meta name="keywords" content="AI prompts, ADHD productivity, lead enrichment API, workflow automation, digital tools, data software, lifetime access"/>
+  <meta property="og:title" content="Bold Guide — Data. Tools. Results."/>
+  <meta property="og:description" content="Premium digital tools and knowledge products. Pay once, own forever."/>
+  <meta property="og:type" content="website"/>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    :root {
+      --bg:       #0a0a08;
+      --surface:  #141410;
+      --surface2: #1c1c17;
+      --gold:     #f59e0b;
+      --gold-dim: #b45309;
+      --green:    #22c55e;
+      --text:     #f5f0e8;
+      --muted:    #8a8474;
+      --border:   rgba(245,158,11,0.15);
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'IBM Plex Sans', sans-serif;
+      overflow-x: hidden;
+    }
+
+    /* grain overlay */
+    body::after {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+      pointer-events: none;
+      z-index: 999;
+      opacity: 0.35;
+    }
+
+    .serif  { font-family: 'Playfair Display', serif; }
+    .mono   { font-family: 'IBM Plex Mono', monospace; }
+
+    /* ── nav ── */
+    nav {
+      position: sticky; top: 0; z-index: 100;
+      background: rgba(10,10,8,0.92);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    /* ── hero ── */
+    .hero-bg {
+      background:
+        radial-gradient(ellipse 80% 50% at 50% -10%, rgba(245,158,11,0.08) 0%, transparent 70%),
+        radial-gradient(ellipse 40% 30% at 80% 80%, rgba(34,197,94,0.04) 0%, transparent 60%);
+    }
+
+    .gold-line {
+      display: inline-block;
+      background: linear-gradient(90deg, var(--gold), #fcd34d);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    /* ── product card ── */
+    .product-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      transition: border-color 0.25s, transform 0.2s, box-shadow 0.25s;
+      position: relative;
+      overflow: hidden;
+    }
+    .product-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--gold), #fcd34d);
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.3s ease;
+    }
+    .product-card:hover {
+      border-color: rgba(245,158,11,0.4);
+      transform: translateY(-4px);
+      box-shadow: 0 20px 60px rgba(245,158,11,0.08);
+    }
+    .product-card:hover::before { transform: scaleX(1); }
+
+    .tag {
+      display: inline-block;
+      border: 1px solid rgba(245,158,11,0.25);
+      color: #d97706;
+      border-radius: 2px;
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 10px;
+      letter-spacing: 0.06em;
+      padding: 2px 8px;
+      text-transform: uppercase;
+    }
+
+    .btn-gold {
+      display: inline-block;
+      background: var(--gold);
+      color: #0a0a08;
+      font-weight: 600;
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 13px;
+      letter-spacing: 0.04em;
+      border-radius: 2px;
+      text-decoration: none;
+      transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
+      box-shadow: 0 0 20px rgba(245,158,11,0.2);
+    }
+    .btn-gold:hover {
+      background: #fcd34d;
+      transform: translateY(-1px);
+      box-shadow: 0 0 36px rgba(245,158,11,0.4);
+    }
+
+    .btn-outline {
+      display: inline-block;
+      border: 1px solid var(--gold);
+      color: var(--gold);
+      font-weight: 500;
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 13px;
+      letter-spacing: 0.04em;
+      border-radius: 2px;
+      text-decoration: none;
+      transition: background 0.2s, color 0.2s;
+    }
+    .btn-outline:hover { background: var(--gold); color: #0a0a08; }
+
+    /* ── value props ── */
+    .prop-card {
+      border-left: 2px solid var(--gold);
+      padding-left: 20px;
+    }
+
+    /* ── divider ── */
+    .gold-divider {
+      border: none;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--gold), transparent);
+      opacity: 0.2;
+    }
+
+    /* ── animations ── */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(24px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    .fade-1 { animation: fadeUp 0.7s 0.1s both; }
+    .fade-2 { animation: fadeUp 0.7s 0.25s both; }
+    .fade-3 { animation: fadeUp 0.7s 0.4s both; }
+    .fade-4 { animation: fadeUp 0.7s 0.55s both; }
+
+    /* ── scrollbar ── */
+    ::-webkit-scrollbar { width: 4px; }
+    ::-webkit-scrollbar-track { background: var(--bg); }
+    ::-webkit-scrollbar-thumb { background: var(--gold-dim); border-radius: 2px; }
+  </style>
+</head>
+<body>
+
+  <!-- ── NAV ── -->
+  <nav>
+    <div style="max-width:1100px;margin:0 auto;padding:18px 24px;display:flex;align-items:center;justify-content:space-between">
+      <span class="serif" style="font-size:22px;font-weight:900;letter-spacing:-0.02em">
+        Bold<span style="color:var(--gold)">Guide</span>
+      </span>
+      <div style="display:flex;gap:24px;align-items:center">
+        <a href="#products" style="color:var(--muted);text-decoration:none;font-size:13px;letter-spacing:0.04em;font-family:'IBM Plex Mono',monospace;transition:color 0.2s" onmouseover="this.style.color='var(--gold)'" onmouseout="this.style.color='var(--muted)'">PRODUCTS</a>
+        <a href="#products" class="btn-outline" style="padding:8px 18px">Browse →</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ── HERO ── -->
+  <section class="hero-bg" style="padding:100px 24px 80px;position:relative;overflow:hidden">
+    <!-- decorative lines -->
+    <div style="position:absolute;top:0;left:0;right:0;bottom:0;background-image:repeating-linear-gradient(0deg,transparent,transparent 79px,rgba(245,158,11,0.03) 79px,rgba(245,158,11,0.03) 80px),repeating-linear-gradient(90deg,transparent,transparent 79px,rgba(245,158,11,0.03) 79px,rgba(245,158,11,0.03) 80px);pointer-events:none"></div>
+
+    <div style="max-width:900px;margin:0 auto;position:relative">
+      <div class="fade-1 mono" style="color:var(--gold);font-size:11px;letter-spacing:0.14em;margin-bottom:20px">BOLD GUIDE / EST. 2026 / DIGITAL TOOLS</div>
+
+      <h1 class="serif fade-2" style="font-size:clamp(48px,8vw,88px);line-height:1.0;letter-spacing:-0.03em;margin-bottom:28px;font-weight:900">
+        Tools Built for<br>
+        <span class="gold-line">People Who</span><br>
+        Move Fast.
+      </h1>
+
+      <p class="fade-3" style="font-size:18px;color:var(--muted);max-width:520px;line-height:1.7;margin-bottom:40px">
+        Premium data tools and knowledge products. No subscriptions, no fluff —
+        just high-leverage software and guides you own forever.
+      </p>
+
+      <div class="fade-4" style="display:flex;gap:16px;flex-wrap:wrap;align-items:center">
+        <a href="#products" class="btn-gold" style="padding:14px 32px;font-size:14px">View Products →</a>
+        <span class="mono" style="color:var(--muted);font-size:12px">2 products · lifetime access · instant delivery</span>
+      </div>
+    </div>
+  </section>
+
+  <hr class="gold-divider" style="margin:0"/>
+
+  <!-- ── PRODUCTS ── -->
+  <section id="products" style="padding:80px 24px">
+    <div style="max-width:1100px;margin:0 auto">
+      <div style="margin-bottom:48px">
+        <div class="mono" style="color:var(--gold);font-size:11px;letter-spacing:0.14em;margin-bottom:12px">// CATALOG</div>
+        <h2 class="serif" style="font-size:clamp(32px,5vw,48px);font-weight:900;letter-spacing:-0.02em">Everything We Build,<br>You Own Forever.</h2>
+      </div>
+
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:28px">
+
+        <!-- LeadForge -->
+        <div class="product-card" style="padding:36px">
+          <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:20px">
+            <div>
+              <div class="mono" style="color:var(--muted);font-size:10px;letter-spacing:0.1em;margin-bottom:8px">SOFTWARE / API</div>
+              <h3 class="serif" style="font-size:28px;font-weight:700;letter-spacing:-0.01em">Lead<span style="color:var(--gold)">Forge</span></h3>
+            </div>
+            <div style="text-align:right">
+              <div class="serif" style="font-size:36px;font-weight:900;color:var(--gold);line-height:1">$97</div>
+              <div class="mono" style="font-size:10px;color:var(--muted);letter-spacing:0.06em">ONE-TIME</div>
+            </div>
+          </div>
+
+          <p style="color:var(--muted);font-size:14px;line-height:1.75;margin-bottom:24px">
+            B2B lead enrichment + workflow automation API. Send a domain, get back company info,
+            social links, and emails. Chain fetch → extract → transform → export steps over HTTP.
+            Pay once, call it forever.
+          </p>
+
+          <div style="display:flex;flex-wrap:wrap;gap:8px;margin-bottom:32px">
+            <span class="tag">API</span>
+            <span class="tag">Developer Tool</span>
+            <span class="tag">Data</span>
+            <span class="tag">Automation</span>
+          </div>
+
+          <div style="border-top:1px solid rgba(245,158,11,0.1);padding-top:24px;display:flex;flex-direction:column;gap:10px">
+            <a href="https://leadforge-rh03.onrender.com/checkout" class="btn-gold" style="padding:14px 24px;text-align:center;display:block">
+              Get LeadForge — $97 →
+            </a>
+            <a href="https://leadforge-rh03.onrender.com/docs" target="_blank" style="text-align:center;color:var(--muted);font-size:12px;text-decoration:none;font-family:'IBM Plex Mono',monospace;letter-spacing:0.04em" onmouseover="this.style.color='var(--gold)'" onmouseout="this.style.color='var(--muted)'">View API Docs →</a>
+          </div>
+        </div>
+
+        <!-- ADHD Brain Unlock -->
+        <div class="product-card" style="padding:36px">
+          <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:20px">
+            <div>
+              <div class="mono" style="color:var(--muted);font-size:10px;letter-spacing:0.1em;margin-bottom:8px">DIGITAL GUIDE / AI</div>
+              <h3 class="serif" style="font-size:28px;font-weight:700;letter-spacing:-0.01em;line-height:1.1">ADHD Brain<br><span style="color:var(--gold)">Unlock</span></h3>
+            </div>
+            <div style="text-align:right">
+              <div class="serif" style="font-size:36px;font-weight:900;color:var(--gold);line-height:1">$27</div>
+              <div class="mono" style="font-size:10px;color:var(--muted);letter-spacing:0.06em">ONE-TIME</div>
+            </div>
+          </div>
+
+          <p style="color:var(--muted);font-size:14px;line-height:1.75;margin-bottom:24px">
+            150 expert-crafted AI prompts designed specifically for ADHD brains.
+            Beat procrastination, sharpen focus, and build momentum — using AI as
+            your personal productivity co-pilot. Instant download.
+          </p>
+
+          <div style="display:flex;flex-wrap:wrap;gap:8px;margin-bottom:32px">
+            <span class="tag">AI Prompts</span>
+            <span class="tag">Productivity</span>
+            <span class="tag">ADHD</span>
+            <span class="tag">Digital Book</span>
+          </div>
+
+          <div style="border-top:1px solid rgba(245,158,11,0.1);padding-top:24px;display:flex;flex-direction:column;gap:10px">
+            <a href="https://rickster722.gumroad.com/l/rcbqbp" target="_blank" class="btn-gold" style="padding:14px 24px;text-align:center;display:block">
+              Get It Now — $27 →
+            </a>
+            <div class="mono" style="text-align:center;color:var(--muted);font-size:11px;letter-spacing:0.04em">⚡ Instant download via Gumroad</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <hr class="gold-divider"/>
+
+  <!-- ── WHY BOLD GUIDE ── -->
+  <section style="padding:80px 24px">
+    <div style="max-width:1100px;margin:0 auto">
+      <div style="margin-bottom:48px">
+        <div class="mono" style="color:var(--gold);font-size:11px;letter-spacing:0.14em;margin-bottom:12px">// WHY BOLD GUIDE</div>
+        <h2 class="serif" style="font-size:clamp(28px,4vw,40px);font-weight:900;letter-spacing:-0.02em">Built Different.<br>Priced Honestly.</h2>
+      </div>
+
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:36px">
+
+        <div class="prop-card">
+          <div class="mono" style="color:var(--gold);font-size:11px;letter-spacing:0.1em;margin-bottom:10px">01 / LIFETIME ACCESS</div>
+          <h4 style="font-size:18px;font-weight:600;margin-bottom:10px">Buy once. Keep forever.</h4>
+          <p style="color:var(--muted);font-size:14px;line-height:1.7">No subscriptions, no renewal emails, no price hikes. Every Bold Guide product is a one-time purchase you own for life.</p>
+        </div>
+
+        <div class="prop-card">
+          <div class="mono" style="color:var(--gold);font-size:11px;letter-spacing:0.1em;margin-bottom:10px">02 / BUILT FOR RESULTS</div>
+          <h4 style="font-size:18px;font-weight:600;margin-bottom:10px">Every product solves a real problem.</h4>
+          <p style="color:var(--muted);font-size:14px;line-height:1.7">No bloat, no feature theater. Bold Guide products are sharp tools built around specific, high-value outcomes for builders and operators.</p>
+        </div>
+
+        <div class="prop-card">
+          <div class="mono" style="color:var(--gold);font-size:11px;letter-spacing:0.1em;margin-bottom:10px">03 / INSTANT DELIVERY</div>
+          <h4 style="font-size:18px;font-weight:600;margin-bottom:10px">In your hands in 60 seconds.</h4>
+          <p style="color:var(--muted);font-size:14px;line-height:1.7">API keys hit your inbox automatically. Digital downloads are available immediately. No waiting, no manual steps.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <hr class="gold-divider"/>
+
+  <!-- ── FOOTER ── -->
+  <footer style="padding:40px 24px;text-align:center">
+    <div class="serif" style="font-size:20px;font-weight:900;margin-bottom:16px">
+      Bold<span style="color:var(--gold)">Guide</span>
+    </div>
+    <div class="mono" style="font-size:11px;color:var(--muted);letter-spacing:0.08em;margin-bottom:16px">
+      DATA. TOOLS. RESULTS.
+    </div>
+    <div style="display:flex;justify-content:center;gap:24px;flex-wrap:wrap;margin-bottom:20px">
+      <a href="#products" style="color:var(--muted);text-decoration:none;font-size:13px" onmouseover="this.style.color='var(--gold)'" onmouseout="this.style.color='var(--muted)'">All Products</a>
+      <a href="mailto:rickm.vzw@gmail.com" style="color:var(--muted);text-decoration:none;font-size:13px" onmouseover="this.style.color='var(--gold)'" onmouseout="this.style.color='var(--muted)'">Contact</a>
+      <a href="https://leadforge-rh03.onrender.com/docs" target="_blank" style="color:var(--muted);text-decoration:none;font-size:13px" onmouseover="this.style.color='var(--gold)'" onmouseout="this.style.color='var(--muted)'">LeadForge API Docs</a>
+    </div>
+    <div class="mono" style="font-size:11px;color:#3d3d35;letter-spacing:0.06em">© 2026 BOLD GUIDE · ALL RIGHTS RESERVED</div>
+  </footer>
+
+</body>
+</html>

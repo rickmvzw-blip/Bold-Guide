@@ -1,404 +1,347 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-
-  <!-- Primary -->
-  <title>Bold Guide — Data. Tools. Results.</title>
-  <meta name="description" content="Bold Guide sells premium digital tools and knowledge products for people who move fast. Lead enrichment APIs, AI prompt packs, and data software. Pay once, own forever."/>
-  <meta name="keywords" content="AI prompts, ADHD productivity, lead enrichment API, workflow automation, digital tools, data software, lifetime access, no subscriptions"/>
-  <meta name="author" content="Bold Guide"/>
-  <meta name="theme-color" content="#0a0a08"/>
-  <link rel="canonical" href="https://boldguide.io/"/>
-
-  <!-- Favicon (inline SVG, no extra request) -->
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='18' fill='%230a0a08'/%3E%3Ctext x='50' y='66' text-anchor='middle' font-family='Georgia,serif' font-weight='900' font-size='52' fill='%23f59e0b'%3EBG%3C/text%3E%3C/svg%3E"/>
-  <link rel="apple-touch-icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='18' fill='%230a0a08'/%3E%3Ctext x='50' y='66' text-anchor='middle' font-family='Georgia,serif' font-weight='900' font-size='52' fill='%23f59e0b'%3EBG%3C/text%3E%3C/svg%3E"/>
-
-  <!-- Open Graph -->
-  <meta property="og:title" content="Bold Guide — Data. Tools. Results."/>
-  <meta property="og:description" content="Premium digital tools and knowledge products. Pay once, own forever. No subscriptions, no SaaS tax."/>
-  <meta property="og:type" content="website"/>
-  <meta property="og:url" content="https://boldguide.io/"/>
-  <meta property="og:image" content="https://boldguide.io/og-image.png"/>
-  <meta property="og:image:width" content="1200"/>
-  <meta property="og:image:height" content="630"/>
-  <meta property="og:site_name" content="Bold Guide"/>
-  <meta property="og:locale" content="en_US"/>
-
-  <!-- Twitter / X Card -->
-  <meta name="twitter:card" content="summary_large_image"/>
-  <meta name="twitter:title" content="Bold Guide — Data. Tools. Results."/>
-  <meta name="twitter:description" content="Premium digital tools. Pay once, own forever. No subscriptions."/>
-  <meta name="twitter:image" content="https://boldguide.io/og-image.png"/>
-
-  <!-- Structured Data (Organization + WebSite) -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "Organization",
-        "@id": "https://boldguide.io/#org",
-        "name": "Bold Guide",
-        "url": "https://boldguide.io/",
-        "logo": "https://boldguide.io/og-image.png",
-        "sameAs": []
-      },
-      {
-        "@type": "WebSite",
-        "@id": "https://boldguide.io/#site",
-        "url": "https://boldguide.io/",
-        "name": "Bold Guide",
-        "description": "Premium digital tools and knowledge products. Pay once, own forever.",
-        "publisher": { "@id": "https://boldguide.io/#org" }
-      }
-    ]
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Bold Guide — Tools that get you unstuck and shipped</title>
+<meta name="description" content="Bold Guide LLC — LeadForge B2B Lead Enrichment API ($97 lifetime) and ADHD Brain Unlock 150 AI Prompts ($27). Pay once. No subscriptions. Instant delivery." />
+<meta property="og:title" content="Bold Guide — Tools that get you unstuck and shipped" />
+<meta property="og:description" content="LeadForge API + ADHD Brain Unlock prompts. Pay once. Lifetime access. Built by a solo founder." />
+<meta property="og:image" content="https://boldguide.io/og-image.png" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://boldguide.io" />
+<meta name="twitter:card" content="summary_large_image" />
+<link rel="icon" href="/logo.png" />
+<style>
+  :root{
+    --navy:#1B2A4E; --navy-2:#243460; --amber:#E8A33D; --amber-2:#F2B85A;
+    --ink:#0F1626; --bg:#FBFAF7; --paper:#FFFFFF; --line:#E6E4DD;
+    --muted:#6B6F7A; --gray:#8B8B8B; --green:#1F7A4D;
+    --shadow: 0 1px 2px rgba(15,22,38,.04), 0 8px 24px rgba(15,22,38,.06);
+    --shadow-lg: 0 2px 4px rgba(15,22,38,.05), 0 24px 48px rgba(15,22,38,.10);
   }
-  </script>
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0}
+  body{font-family:-apple-system,BlinkMacSystemFont,"Inter","Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    background:var(--bg); color:var(--ink); line-height:1.55; -webkit-font-smoothing:antialiased}
+  a{color:var(--navy); text-decoration:none}
+  a:hover{text-decoration:underline}
+  .wrap{max-width:1120px; margin:0 auto; padding:0 24px}
 
-  <link rel="preconnect" href="https://fonts.googleapis.com"/>
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
-  <script src="https://cdn.tailwindcss.com"></script>
+  /* NAV */
+  header.nav{position:sticky; top:0; z-index:50; background:rgba(251,250,247,.85); backdrop-filter:saturate(140%) blur(8px); border-bottom:1px solid var(--line)}
+  .nav-row{display:flex; align-items:center; justify-content:space-between; height:64px}
+  .brand{display:flex; align-items:center; gap:10px; font-weight:800; color:var(--navy); letter-spacing:.2px}
+  .brand .mark{width:28px; height:28px; border-radius:6px; background:var(--navy); color:#fff; display:grid; place-items:center; font-weight:900; font-size:14px; position:relative}
+  .brand .mark::after{content:""; position:absolute; width:6px; height:6px; border-radius:50%; background:var(--amber); top:6px; right:6px}
+  .nav-links{display:flex; gap:24px; align-items:center; font-size:14px; color:var(--muted)}
+  .nav-links a{color:var(--muted)}
+  .nav-links a:hover{color:var(--navy); text-decoration:none}
 
-  <style>
-    :root {
-      --bg:       #0a0a08;
-      --surface:  #141410;
-      --surface2: #1c1c17;
-      --gold:     #f59e0b;
-      --gold-dim: #b45309;
-      --green:    #22c55e;
-      --text:     #f5f0e8;
-      --muted:    #8a8474;
-      --border:   rgba(245,158,11,0.15);
-    }
+  /* HERO */
+  .hero{padding:80px 0 40px}
+  .eyebrow{display:inline-flex; align-items:center; gap:8px; font-size:12px; letter-spacing:.12em; text-transform:uppercase; color:var(--muted); font-weight:600}
+  .eyebrow .dot{width:6px; height:6px; border-radius:50%; background:var(--amber)}
+  h1{font-size:clamp(40px,6vw,64px); line-height:1.05; letter-spacing:-.02em; margin:18px 0 18px; color:var(--navy); font-weight:800}
+  h1 .accent{color:var(--amber)}
+  .lede{font-size:19px; color:var(--muted); max-width:660px}
+  .hero-cta{display:flex; gap:14px; margin-top:28px; flex-wrap:wrap}
+  .btn{display:inline-flex; align-items:center; gap:8px; padding:12px 18px; border-radius:10px; font-weight:600; font-size:15px; border:1px solid transparent; cursor:pointer; transition:transform .08s ease, box-shadow .15s ease}
+  .btn:hover{text-decoration:none; transform:translateY(-1px)}
+  .btn-primary{background:var(--navy); color:#fff}
+  .btn-primary:hover{background:var(--navy-2); box-shadow:var(--shadow)}
+  .btn-amber{background:var(--amber); color:var(--ink)}
+  .btn-amber:hover{background:var(--amber-2); box-shadow:var(--shadow)}
+  .btn-ghost{background:transparent; color:var(--navy); border-color:var(--line)}
+  .btn-ghost:hover{border-color:var(--navy)}
 
-    * { box-sizing: border-box; margin: 0; padding: 0; }
+  /* TRUST PILL ROW (under hero) */
+  .pills{display:flex; gap:10px; flex-wrap:wrap; margin-top:24px}
+  .pill{display:inline-flex; align-items:center; gap:8px; font-size:13px; color:var(--navy); background:var(--paper); border:1px solid var(--line); padding:8px 12px; border-radius:999px; font-weight:500}
+  .pill .ic{width:14px; height:14px; flex:none; color:var(--green)}
 
-    body {
-      background: var(--bg);
-      color: var(--text);
-      font-family: 'IBM Plex Sans', sans-serif;
-      overflow-x: hidden;
-    }
+  /* PRODUCTS */
+  section.products{padding:48px 0 64px}
+  .section-head{display:flex; align-items:end; justify-content:space-between; margin:0 0 28px; flex-wrap:wrap; gap:12px}
+  .section-head h2{font-size:28px; letter-spacing:-.01em; margin:0; color:var(--navy)}
+  .section-head .meta{color:var(--muted); font-size:14px}
+  .grid{display:grid; grid-template-columns:1fr 1fr; gap:24px}
+  @media (max-width:860px){.grid{grid-template-columns:1fr}}
 
-    /* grain overlay */
-    body::after {
-      content: '';
-      position: fixed;
-      inset: 0;
-      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
-      pointer-events: none;
-      z-index: 999;
-      opacity: 0.35;
-    }
+  .card{background:var(--paper); border:1px solid var(--line); border-radius:16px; overflow:hidden; display:flex; flex-direction:column; transition:transform .15s ease, box-shadow .2s ease, border-color .2s ease}
+  .card:hover{transform:translateY(-2px); box-shadow:var(--shadow-lg); border-color:#D9D5C7}
+  .card .cover{aspect-ratio:16/10; width:100%; object-fit:cover; display:block; border-bottom:1px solid var(--line); background:#EEE}
+  .card .body{padding:24px 24px 28px; display:flex; flex-direction:column; gap:14px; flex:1}
+  .pain-hook{font-size:14px; color:var(--amber); background:#FBEFD7; border-left:3px solid var(--amber); padding:10px 14px; border-radius:0 8px 8px 0; font-weight:500; font-style:italic}
+  .pain-hook strong{color:#7A5212; font-weight:700; font-style:normal}
+  .tag-row{display:flex; gap:8px; flex-wrap:wrap}
+  .tag{font-size:11px; letter-spacing:.08em; text-transform:uppercase; color:var(--navy); background:#EFF1F7; border:1px solid #E0E4EE; padding:4px 8px; border-radius:6px; font-weight:600}
+  .tag.amber{color:#7A5212; background:#FBEFD7; border-color:#F2DDA6}
+  .tag.green{color:#0F5C39; background:#DDEFE5; border-color:#B8DCC9}
+  .card h3{margin:0; font-size:22px; color:var(--navy); letter-spacing:-.01em}
+  .card p{margin:0; color:var(--muted); font-size:15px}
+  .feature-list{margin:0; padding:0; list-style:none; display:grid; gap:8px}
+  .feature-list li{display:flex; gap:10px; align-items:flex-start; font-size:14.5px; color:var(--ink)}
+  .feature-list li::before{content:""; width:14px; height:14px; flex:none; margin-top:4px;
+    background:radial-gradient(circle at center, var(--amber) 0 38%, transparent 40%);
+    border:1.5px solid var(--navy); border-radius:50%}
 
-    .serif  { font-family: 'Playfair Display', serif; }
-    .mono   { font-family: 'IBM Plex Mono', monospace; }
+  .price-row{display:flex; align-items:baseline; justify-content:space-between; margin-top:8px; padding-top:18px; border-top:1px dashed var(--line); flex-wrap:wrap; gap:12px}
+  .price-block{display:flex; flex-direction:column; gap:2px}
+  .price{font-size:28px; font-weight:800; color:var(--navy); letter-spacing:-.02em}
+  .price .unit{font-size:13px; color:var(--muted); font-weight:500; margin-left:6px}
+  .anchor{font-size:12px; color:var(--gray); text-decoration:line-through; margin-top:-4px}
+  .anchor-note{font-size:12px; color:var(--green); font-weight:600}
 
-    /* ── nav ── */
-    nav {
-      position: sticky; top: 0; z-index: 100;
-      background: rgba(10,10,8,0.92);
-      backdrop-filter: blur(16px);
-      border-bottom: 1px solid var(--border);
-    }
+  /* Sample form */
+  .sample{margin-top:14px; padding:16px; background:#FFFBF1; border:1px dashed #E8C77B; border-radius:10px}
+  .sample .label{font-size:12px; letter-spacing:.08em; text-transform:uppercase; color:#7A5212; font-weight:700; margin-bottom:6px}
+  .sample .desc{font-size:13.5px; color:var(--ink); margin-bottom:10px}
+  .sample form{display:flex; gap:8px; flex-wrap:wrap}
+  .sample input[type=email]{flex:1; min-width:180px; padding:10px 12px; border:1px solid var(--line); border-radius:8px; font-size:14px; background:#fff}
+  .sample input[type=email]:focus{outline:none; border-color:var(--navy); box-shadow:0 0 0 3px rgba(27,42,78,.1)}
+  .sample button{padding:10px 16px; border:none; border-radius:8px; background:var(--navy); color:#fff; font-weight:600; font-size:14px; cursor:pointer}
+  .sample button:hover{background:var(--navy-2)}
+  .sample button:disabled{opacity:.6; cursor:wait}
+  .sample .msg{font-size:13px; margin-top:8px}
+  .sample .msg.ok{color:var(--green); font-weight:600}
+  .sample .msg.err{color:#B23A3A; font-weight:600}
 
-    /* ── hero ── */
-    .hero-bg {
-      background:
-        radial-gradient(ellipse 80% 50% at 50% -10%, rgba(245,158,11,0.08) 0%, transparent 70%),
-        radial-gradient(ellipse 40% 30% at 80% 80%, rgba(34,197,94,0.04) 0%, transparent 60%);
-    }
+  /* FOUNDER */
+  section.founder{background:var(--paper); border-top:1px solid var(--line); border-bottom:1px solid var(--line); padding:64px 0}
+  .founder-grid{display:grid; grid-template-columns:240px 1fr; gap:40px; align-items:center}
+  @media (max-width:760px){.founder-grid{grid-template-columns:1fr; text-align:center}}
+  .founder img{width:240px; height:240px; border-radius:12px; object-fit:cover; border:1px solid var(--line); box-shadow:var(--shadow)}
+  .founder h2{margin:0 0 12px; color:var(--navy); font-size:26px; letter-spacing:-.01em}
+  .founder p{color:var(--muted); font-size:16px; margin:0 0 12px; max-width:560px}
+  .founder .sig{margin-top:14px; font-family:Georgia, serif; font-style:italic; color:var(--navy); font-size:18px}
 
-    .gold-line {
-      display: inline-block;
-      background: linear-gradient(90deg, var(--gold), #fcd34d);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-    }
+  /* TRUST FOOTER */
+  .trust{padding:48px 0; background:var(--bg)}
+  .trust-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:32px}
+  @media (max-width:760px){.trust-grid{grid-template-columns:1fr}}
+  .trust h4{margin:0 0 6px; font-size:15px; color:var(--navy)}
+  .trust p{margin:0; color:var(--muted); font-size:14px}
 
-    /* ── product card ── */
-    .product-card {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: 4px;
-      transition: border-color 0.25s, transform 0.2s, box-shadow 0.25s;
-      position: relative;
-      overflow: hidden;
-    }
-    .product-card::before {
-      content: '';
-      position: absolute;
-      top: 0; left: 0; right: 0;
-      height: 3px;
-      background: linear-gradient(90deg, var(--gold), #fcd34d);
-      transform: scaleX(0);
-      transform-origin: left;
-      transition: transform 0.3s ease;
-    }
-    .product-card:hover {
-      border-color: rgba(245,158,11,0.4);
-      transform: translateY(-4px);
-      box-shadow: 0 20px 60px rgba(245,158,11,0.08);
-    }
-    .product-card:hover::before { transform: scaleX(1); }
-
-    .tag {
-      display: inline-block;
-      border: 1px solid rgba(245,158,11,0.25);
-      color: #d97706;
-      border-radius: 2px;
-      font-family: 'IBM Plex Mono', monospace;
-      font-size: 10px;
-      letter-spacing: 0.06em;
-      padding: 2px 8px;
-      text-transform: uppercase;
-    }
-
-    .btn-gold {
-      display: inline-block;
-      background: var(--gold);
-      color: #0a0a08;
-      font-weight: 600;
-      font-family: 'IBM Plex Mono', monospace;
-      font-size: 13px;
-      letter-spacing: 0.04em;
-      border-radius: 2px;
-      text-decoration: none;
-      transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
-      box-shadow: 0 0 20px rgba(245,158,11,0.2);
-    }
-    .btn-gold:hover {
-      background: #fcd34d;
-      transform: translateY(-1px);
-      box-shadow: 0 0 36px rgba(245,158,11,0.4);
-    }
-
-    .btn-outline {
-      display: inline-block;
-      border: 1px solid var(--gold);
-      color: var(--gold);
-      font-weight: 500;
-      font-family: 'IBM Plex Mono', monospace;
-      font-size: 13px;
-      letter-spacing: 0.04em;
-      border-radius: 2px;
-      text-decoration: none;
-      transition: background 0.2s, color 0.2s;
-    }
-    .btn-outline:hover { background: var(--gold); color: #0a0a08; }
-
-    /* ── value props ── */
-    .prop-card {
-      border-left: 2px solid var(--gold);
-      padding-left: 20px;
-    }
-
-    /* ── divider ── */
-    .gold-divider {
-      border: none;
-      height: 1px;
-      background: linear-gradient(90deg, transparent, var(--gold), transparent);
-      opacity: 0.2;
-    }
-
-    /* ── animations ── */
-    @keyframes fadeUp {
-      from { opacity: 0; transform: translateY(24px); }
-      to   { opacity: 1; transform: translateY(0); }
-    }
-    .fade-1 { animation: fadeUp 0.7s 0.1s both; }
-    .fade-2 { animation: fadeUp 0.7s 0.25s both; }
-    .fade-3 { animation: fadeUp 0.7s 0.4s both; }
-    .fade-4 { animation: fadeUp 0.7s 0.55s both; }
-
-    /* ── scrollbar ── */
-    ::-webkit-scrollbar { width: 4px; }
-    ::-webkit-scrollbar-track { background: var(--bg); }
-    ::-webkit-scrollbar-thumb { background: var(--gold-dim); border-radius: 2px; }
-  </style>
+  footer.foot{border-top:1px solid var(--line); padding:28px 0 56px; color:var(--muted); font-size:13px}
+  .foot-row{display:flex; justify-content:space-between; align-items:center; gap:24px; flex-wrap:wrap}
+  .foot a{color:var(--muted)}
+</style>
 </head>
 <body>
 
-  <!-- ── NAV ── -->
-  <nav>
-    <div style="max-width:1100px;margin:0 auto;padding:18px 24px;display:flex;align-items:center;justify-content:space-between">
-      <span class="serif" style="font-size:22px;font-weight:900;letter-spacing:-0.02em">
-        Bold<span style="color:var(--gold)">Guide</span>
-      </span>
-      <div style="display:flex;gap:24px;align-items:center">
-        <a href="#products" style="color:var(--muted);text-decoration:none;font-size:13px;letter-spacing:0.04em;font-family:'IBM Plex Mono',monospace;transition:color 0.2s" onmouseover="this.style.color='var(--gold)'" onmouseout="this.style.color='var(--muted)'">PRODUCTS</a>
-        <a href="#products" class="btn-outline" style="padding:8px 18px">Browse →</a>
-      </div>
-    </div>
-  </nav>
+<header class="nav">
+  <div class="wrap nav-row">
+    <a class="brand" href="/" aria-label="Bold Guide home">
+      <span class="mark">B</span>
+      <span>Bold Guide<span style="color:var(--gray); font-weight:600; margin-left:6px; font-size:12px;">LLC</span></span>
+    </a>
+    <nav class="nav-links">
+      <a href="#products">Products</a>
+      <a href="#founder">About</a>
+      <a href="https://leadforge-rh03.onrender.com/docs" target="_blank" rel="noopener">API Docs</a>
+    </nav>
+  </div>
+</header>
 
-  <!-- ── HERO ── -->
-  <section class="hero-bg" style="padding:100px 24px 80px;position:relative;overflow:hidden">
-    <!-- decorative lines -->
-    <div style="position:absolute;top:0;left:0;right:0;bottom:0;background-image:repeating-linear-gradient(0deg,transparent,transparent 79px,rgba(245,158,11,0.03) 79px,rgba(245,158,11,0.03) 80px),repeating-linear-gradient(90deg,transparent,transparent 79px,rgba(245,158,11,0.03) 79px,rgba(245,158,11,0.03) 80px);pointer-events:none"></div>
-
-    <div style="max-width:900px;margin:0 auto;position:relative">
-      <div class="fade-1 mono" style="color:var(--gold);font-size:11px;letter-spacing:0.14em;margin-bottom:20px">BOLD GUIDE / EST. 2026 / DIGITAL TOOLS</div>
-
-      <h1 class="serif fade-2" style="font-size:clamp(48px,8vw,88px);line-height:1.0;letter-spacing:-0.03em;margin-bottom:28px;font-weight:900">
-        Tools Built for<br>
-        <span class="gold-line">People Who</span><br>
-        Move Fast.
-      </h1>
-
-      <p class="fade-3" style="font-size:18px;color:var(--muted);max-width:520px;line-height:1.7;margin-bottom:40px">
-        Premium data tools and knowledge products. No subscriptions, no fluff —
-        just high-leverage software and guides you own forever.
+<main>
+  <section class="hero">
+    <div class="wrap">
+      <span class="eyebrow"><span class="dot"></span>Bold Guide LLC · Solo-built. Buyer-tested.</span>
+      <h1>Tools that get you<br/><span class="accent">unstuck</span> — and shipped.</h1>
+      <p class="lede">
+        Two products. No subscriptions. No "seat tiers." A B2B lead enrichment API for operators
+        who hate $1,200/yr CRM bills, and a 150-prompt playbook that turns ADHD into a competitive edge.
       </p>
-
-      <div class="fade-4" style="display:flex;gap:16px;flex-wrap:wrap;align-items:center">
-        <a href="#products" class="btn-gold" style="padding:14px 32px;font-size:14px">View Products →</a>
-        <span class="mono" style="color:var(--muted);font-size:12px">2 products · lifetime access · instant delivery</span>
+      <div class="hero-cta">
+        <a class="btn btn-primary" href="#products">See the products →</a>
+        <a class="btn btn-ghost" href="#founder">Meet the founder</a>
+      </div>
+      <div class="pills">
+        <span class="pill">✓&nbsp;Stripe-secured checkout</span>
+        <span class="pill">✓&nbsp;Instant email delivery</span>
+        <span class="pill">✓&nbsp;Pay once · keep forever</span>
+        <span class="pill">✓&nbsp;Money-back guarantee</span>
       </div>
     </div>
   </section>
 
-  <hr class="gold-divider" style="margin:0"/>
-
-  <!-- ── PRODUCTS ── -->
-  <section id="products" style="padding:80px 24px">
-    <div style="max-width:1100px;margin:0 auto">
-      <div style="margin-bottom:48px">
-        <div class="mono" style="color:var(--gold);font-size:11px;letter-spacing:0.14em;margin-bottom:12px">// CATALOG</div>
-        <h2 class="serif" style="font-size:clamp(32px,5vw,48px);font-weight:900;letter-spacing:-0.02em">Everything We Build,<br>You Own Forever.</h2>
+  <section class="products" id="products">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>What we sell</h2>
+        <span class="meta">Both products live · instant delivery · refundable</span>
       </div>
 
-      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:28px">
+      <div class="grid">
 
         <!-- LeadForge -->
-        <div class="product-card" style="padding:36px">
-          <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:20px">
-            <div>
-              <div class="mono" style="color:var(--muted);font-size:10px;letter-spacing:0.1em;margin-bottom:8px">SOFTWARE / API</div>
-              <h3 class="serif" style="font-size:28px;font-weight:700;letter-spacing:-0.01em">Lead<span style="color:var(--gold)">Forge</span></h3>
+        <article class="card" id="leadforge">
+          <img class="cover" src="/leadforge_cover.png" alt="LeadForge — B2B Lead Enrichment API" />
+          <div class="body">
+            <div class="pain-hook">
+              <strong>Tired of $1,200/yr Clearbit and ZoomInfo bills?</strong>
+              Same enrichment. One-time $97. No quotas, no renewals, no sales calls.
             </div>
-            <div style="text-align:right">
-              <div class="serif" style="font-size:36px;font-weight:900;color:var(--gold);line-height:1">$97</div>
-              <div class="mono" style="font-size:10px;color:var(--muted);letter-spacing:0.06em">ONE-TIME</div>
+            <div class="tag-row">
+              <span class="tag">SaaS · API</span>
+              <span class="tag amber">Lifetime access</span>
+              <span class="tag green">30-day refund</span>
+            </div>
+            <h3>LeadForge — B2B Lead Enrichment API</h3>
+            <p>Enrich domains and run small workflow automations from one clean REST API. Built for operators who need leads in JSON, not yet another bloated CRM dashboard.</p>
+            <ul class="feature-list">
+              <li>Bulk enrichment up to 50 domains per request</li>
+              <li>Workflow runner — chain up to 20 steps (fetch, transform, send)</li>
+              <li>Live API key emailed instantly after checkout</li>
+              <li>Swagger docs · Stripe-secured · pay-once, no subscription</li>
+              <li>30-day money-back guarantee — no questions asked</li>
+            </ul>
+            <div class="price-row">
+              <div class="price-block">
+                <div class="anchor">Clearbit / ZoomInfo: $1,200+/yr</div>
+                <div class="price">$97 <span class="unit">one-time · lifetime</span></div>
+                <div class="anchor-note">Save $1,100+ in year 1</div>
+              </div>
+              <a class="btn btn-primary" href="https://leadforge-rh03.onrender.com/checkout">Buy LeadForge →</a>
             </div>
           </div>
-
-          <p style="color:var(--muted);font-size:14px;line-height:1.75;margin-bottom:24px">
-            B2B lead enrichment + workflow automation API. Send a domain, get back company info,
-            social links, and emails. Chain fetch → extract → transform → export steps over HTTP.
-            Pay once, call it forever.
-          </p>
-
-          <div style="display:flex;flex-wrap:wrap;gap:8px;margin-bottom:32px">
-            <span class="tag">API</span>
-            <span class="tag">Developer Tool</span>
-            <span class="tag">Data</span>
-            <span class="tag">Automation</span>
-          </div>
-
-          <div style="border-top:1px solid rgba(245,158,11,0.1);padding-top:24px;display:flex;flex-direction:column;gap:10px">
-            <a href="https://leadforge-rh03.onrender.com/checkout" class="btn-gold" style="padding:14px 24px;text-align:center;display:block">
-              Get LeadForge — $97 →
-            </a>
-            <a href="https://leadforge-rh03.onrender.com/docs" target="_blank" style="text-align:center;color:var(--muted);font-size:12px;text-decoration:none;font-family:'IBM Plex Mono',monospace;letter-spacing:0.04em" onmouseover="this.style.color='var(--gold)'" onmouseout="this.style.color='var(--muted)'">View API Docs →</a>
-          </div>
-        </div>
+        </article>
 
         <!-- ADHD Brain Unlock -->
-        <div class="product-card" style="padding:36px">
-          <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:20px">
-            <div>
-              <div class="mono" style="color:var(--muted);font-size:10px;letter-spacing:0.1em;margin-bottom:8px">DIGITAL GUIDE / AI</div>
-              <h3 class="serif" style="font-size:28px;font-weight:700;letter-spacing:-0.01em;line-height:1.1">ADHD Brain<br><span style="color:var(--gold)">Unlock</span></h3>
+        <article class="card" id="adhd">
+          <img class="cover" src="/adhd_cover.png" alt="ADHD Brain Unlock — 150 AI Prompts" />
+          <div class="body">
+            <div class="pain-hook">
+              <strong>Your to-do list isn't the problem.</strong>
+              Your to-do list has a to-do list. Get unstuck in 60 seconds with prompts built for ADHD brains.
             </div>
-            <div style="text-align:right">
-              <div class="serif" style="font-size:36px;font-weight:900;color:var(--gold);line-height:1">$27</div>
-              <div class="mono" style="font-size:10px;color:var(--muted);letter-spacing:0.06em">ONE-TIME</div>
+            <div class="tag-row">
+              <span class="tag">Digital download · PDF</span>
+              <span class="tag amber">Instant delivery</span>
+              <span class="tag green">24-hr refund</span>
+            </div>
+            <h3>ADHD Brain Unlock — 150 AI Prompts</h3>
+            <p style="font-style:italic; color:var(--navy); font-weight:500;">"Stop starting. Start finishing. 150 prompts that do the thinking for you."</p>
+            <p>If your brain never shuts up but your to-do list never gets done — this is for you. 150 copy-paste AI prompts designed specifically for ADHD brains. No fluff. No therapy. Just prompts that get you unstuck.</p>
+            <ul class="feature-list">
+              <li><strong>20</strong> Morning Routine + <strong>20</strong> Task Management prompts</li>
+              <li><strong>20</strong> Focus &amp; Deep Work + <strong>20</strong> Overcoming Overwhelm</li>
+              <li><strong>20</strong> Time Blocking + <strong>20</strong> Habit Building prompts</li>
+              <li><strong>15</strong> End-of-Day Review + <strong>15</strong> Weekly Planning</li>
+              <li><strong>+ 6 bonus</strong> power tips · works with ChatGPT, Claude, Gemini, any LLM</li>
+              <li>24-hour refund if it doesn't unstick you. No questions.</li>
+            </ul>
+
+            <!-- Lead magnet: free 5-prompt sample -->
+            <div class="sample">
+              <div class="label">Try 5 free prompts before you buy</div>
+              <div class="desc">Drop your email — I'll send 5 of the strongest prompts straight to your inbox. No spam.</div>
+              <form id="sampleForm" autocomplete="off">
+                <input id="sampleEmail" type="email" placeholder="you@yourbrain.com" required />
+                <button type="submit" id="sampleBtn">Send 5 free prompts</button>
+              </form>
+              <div class="msg" id="sampleMsg" role="status" aria-live="polite"></div>
+            </div>
+
+            <div class="price-row">
+              <div class="price-block">
+                <div class="anchor">Typical productivity course: $497</div>
+                <div class="price">$27 <span class="unit">one-time · instant PDF</span></div>
+                <div class="anchor-note">94% less · same outcome</div>
+              </div>
+              <a class="btn btn-amber" href="https://leadforge-rh03.onrender.com/checkout/adhd">Buy the full 150 →</a>
             </div>
           </div>
-
-          <p style="color:var(--muted);font-size:14px;line-height:1.75;margin-bottom:24px">
-            150 expert-crafted AI prompts designed specifically for ADHD brains.
-            Beat procrastination, sharpen focus, and build momentum — using AI as
-            your personal productivity co-pilot. Instant download.
-          </p>
-
-          <div style="display:flex;flex-wrap:wrap;gap:8px;margin-bottom:32px">
-            <span class="tag">AI Prompts</span>
-            <span class="tag">Productivity</span>
-            <span class="tag">ADHD</span>
-            <span class="tag">Digital Book</span>
-          </div>
-
-          <div style="border-top:1px solid rgba(245,158,11,0.1);padding-top:24px;display:flex;flex-direction:column;gap:10px">
-            <a href="https://rickster722.gumroad.com/l/rcbqbp" target="_blank" class="btn-gold" style="padding:14px 24px;text-align:center;display:block">
-              Get It Now — $27 →
-            </a>
-            <div class="mono" style="text-align:center;color:var(--muted);font-size:11px;letter-spacing:0.04em">⚡ Instant download via Gumroad</div>
-          </div>
-        </div>
+        </article>
 
       </div>
     </div>
   </section>
 
-  <hr class="gold-divider"/>
-
-  <!-- ── WHY BOLD GUIDE ── -->
-  <section style="padding:80px 24px">
-    <div style="max-width:1100px;margin:0 auto">
-      <div style="margin-bottom:48px">
-        <div class="mono" style="color:var(--gold);font-size:11px;letter-spacing:0.14em;margin-bottom:12px">// WHY BOLD GUIDE</div>
-        <h2 class="serif" style="font-size:clamp(28px,4vw,40px);font-weight:900;letter-spacing:-0.02em">Built Different.<br>Priced Honestly.</h2>
-      </div>
-
-      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:36px">
-
-        <div class="prop-card">
-          <div class="mono" style="color:var(--gold);font-size:11px;letter-spacing:0.1em;margin-bottom:10px">01 / LIFETIME ACCESS</div>
-          <h4 style="font-size:18px;font-weight:600;margin-bottom:10px">Buy once. Keep forever.</h4>
-          <p style="color:var(--muted);font-size:14px;line-height:1.7">No subscriptions, no renewal emails, no price hikes. Every Bold Guide product is a one-time purchase you own for life.</p>
-        </div>
-
-        <div class="prop-card">
-          <div class="mono" style="color:var(--gold);font-size:11px;letter-spacing:0.1em;margin-bottom:10px">02 / BUILT FOR RESULTS</div>
-          <h4 style="font-size:18px;font-weight:600;margin-bottom:10px">Every product solves a real problem.</h4>
-          <p style="color:var(--muted);font-size:14px;line-height:1.7">No bloat, no feature theater. Bold Guide products are sharp tools built around specific, high-value outcomes for builders and operators.</p>
-        </div>
-
-        <div class="prop-card">
-          <div class="mono" style="color:var(--gold);font-size:11px;letter-spacing:0.1em;margin-bottom:10px">03 / INSTANT DELIVERY</div>
-          <h4 style="font-size:18px;font-weight:600;margin-bottom:10px">In your hands in 60 seconds.</h4>
-          <p style="color:var(--muted);font-size:14px;line-height:1.7">API keys hit your inbox automatically. Digital downloads are available immediately. No waiting, no manual steps.</p>
-        </div>
-
+  <section class="founder" id="founder">
+    <div class="wrap founder-grid">
+      <img src="/ricardo.jpg" alt="Ricardo Montoya, founder of Bold Guide LLC" />
+      <div>
+        <span class="eyebrow"><span class="dot"></span>Built by a solo founder</span>
+        <h2 style="margin-top:10px">I'm Ricardo. I make tools I actually use.</h2>
+        <p>
+          Bold Guide LLC is a one-founder studio. I built LeadForge because I refused to pay
+          $1,200/yr for B2B contact data I only needed sometimes. I built ADHD Brain Unlock
+          because my own ADHD brain needed it — every prompt in there is one I personally use
+          to ship work on hard days.
+        </p>
+        <p>
+          No team of marketers. No VC pressure to raise prices later. Just two products,
+          made well, sold once, supported personally. Email me if anything's broken.
+        </p>
+        <div class="sig">— Ricardo, Bold Guide LLC</div>
       </div>
     </div>
   </section>
 
-  <hr class="gold-divider"/>
+  <section class="trust">
+    <div class="wrap trust-grid">
+      <div>
+        <h4>Built by an operator, not a marketing team</h4>
+        <p>One founder. Two products I personally ship from. Every dollar goes to the maker, not a sales org.</p>
+      </div>
+      <div>
+        <h4>Secure checkout · instant delivery</h4>
+        <p>Stripe handles payment. Your API key or PDF lands in your inbox within seconds of card approval.</p>
+      </div>
+      <div>
+        <h4>Buy once. Keep forever. Refundable.</h4>
+        <p>No subscriptions, no renewals. LeadForge: 30-day refund. ADHD Pack: 24-hour refund. No questions.</p>
+      </div>
+    </div>
+  </section>
+</main>
 
-  <!-- ── FOOTER ── -->
-  <footer style="padding:40px 24px;text-align:center">
-    <div class="serif" style="font-size:20px;font-weight:900;margin-bottom:16px">
-      Bold<span style="color:var(--gold)">Guide</span>
+<footer class="foot">
+  <div class="wrap foot-row">
+    <div>© <span id="yr"></span> Bold Guide LLC · All rights reserved</div>
+    <div>
+      <a href="mailto:hello@boldguide.io">hello@boldguide.io</a> ·
+      <a href="https://leadforge-rh03.onrender.com/docs" target="_blank" rel="noopener">API Docs</a>
     </div>
-    <div class="mono" style="font-size:11px;color:var(--muted);letter-spacing:0.08em;margin-bottom:16px">
-      DATA. TOOLS. RESULTS.
-    </div>
-    <div style="display:flex;justify-content:center;gap:24px;flex-wrap:wrap;margin-bottom:20px">
-      <a href="#products" style="color:var(--muted);text-decoration:none;font-size:13px" onmouseover="this.style.color='var(--gold)'" onmouseout="this.style.color='var(--muted)'">All Products</a>
-      <a href="mailto:rickm.vzw@gmail.com" style="color:var(--muted);text-decoration:none;font-size:13px" onmouseover="this.style.color='var(--gold)'" onmouseout="this.style.color='var(--muted)'">Contact</a>
-      <a href="https://leadforge-rh03.onrender.com/docs" target="_blank" style="color:var(--muted);text-decoration:none;font-size:13px" onmouseover="this.style.color='var(--gold)'" onmouseout="this.style.color='var(--muted)'">LeadForge API Docs</a>
-    </div>
-    <div class="mono" style="font-size:11px;color:#3d3d35;letter-spacing:0.06em">© 2026 BOLD GUIDE · ALL RIGHTS RESERVED</div>
-  </footer>
+  </div>
+</footer>
 
+<script>
+  document.getElementById('yr').textContent = new Date().getFullYear();
+
+  const form = document.getElementById('sampleForm');
+  const btn  = document.getElementById('sampleBtn');
+  const msg  = document.getElementById('sampleMsg');
+  const inp  = document.getElementById('sampleEmail');
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    msg.textContent = ''; msg.className = 'msg';
+    btn.disabled = true; btn.textContent = 'Sending…';
+    try {
+      const res = await fetch('https://leadforge-rh03.onrender.com/api/sample/adhd', {
+        method:'POST',
+        headers:{'Content-Type':'application/json'},
+        body: JSON.stringify({ email: inp.value.trim() })
+      });
+      const data = await res.json().catch(()=>({}));
+      if (res.ok) {
+        msg.textContent = '✓ Sent. Check your inbox in a minute (and your spam folder just in case).';
+        msg.className = 'msg ok';
+        inp.value = '';
+      } else {
+        msg.textContent = '✗ ' + (data.detail || 'Could not send. Try again or email hello@boldguide.io');
+        msg.className = 'msg err';
+      }
+    } catch (err) {
+      msg.textContent = '✗ Network error. Try again or email hello@boldguide.io';
+      msg.className = 'msg err';
+    } finally {
+      btn.disabled = false; btn.textContent = 'Send 5 free prompts';
+    }
+  });
+</script>
 </body>
 </html>

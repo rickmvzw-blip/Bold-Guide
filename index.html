@@ -107,6 +107,37 @@
   .sample .msg.ok{color:var(--green); font-weight:600}
   .sample .msg.err{color:#B23A3A; font-weight:600}
 
+  /* FAQ ACCORDION (per product card) */
+  .faq{margin-top:18px; border-top:1px dashed var(--line); padding-top:16px}
+  .faq-title{font-size:11px; letter-spacing:.12em; text-transform:uppercase; color:var(--muted); font-weight:700; margin-bottom:10px}
+  .faq details{border-bottom:1px solid var(--line)}
+  .faq details:last-of-type{border-bottom:none}
+  .faq details[open]{background:#FBF8F1}
+  .faq summary{list-style:none; cursor:pointer; padding:12px 0 12px 28px; position:relative;
+    font-size:14.5px; font-weight:600; color:var(--navy); user-select:none}
+  .faq summary::-webkit-details-marker{display:none}
+  .faq summary::before{content:"+"; position:absolute; left:6px; top:50%; transform:translateY(-50%);
+    width:18px; height:18px; line-height:18px; text-align:center; border-radius:50%;
+    background:var(--amber); color:var(--ink); font-weight:900; font-size:14px;
+    transition:transform .18s ease}
+  .faq details[open] summary::before{content:"−"; transform:translateY(-50%) rotate(180deg)}
+  .faq summary:hover{color:var(--navy-2)}
+  .faq .answer{padding:0 8px 14px 28px; color:var(--muted); font-size:14px; line-height:1.65}
+  .faq .answer p{margin:0 0 8px}
+  .faq .answer p:last-child{margin-bottom:0}
+  .faq .answer code{font-size:12.5px; background:#EFF1F7; padding:2px 6px; border-radius:4px; color:var(--navy)}
+  .faq .answer a{color:var(--navy); font-weight:600; text-decoration:underline}
+  .faq .dev-toggle{margin-top:10px; padding-top:10px; border-top:1px dotted var(--line)}
+  .faq .dev-toggle summary{padding-left:0; font-size:12px; letter-spacing:.06em; text-transform:uppercase; color:var(--muted); font-weight:700}
+  .faq .dev-toggle summary::before{display:none}
+  .faq .dev-toggle summary::after{content:" ↓"; color:var(--amber)}
+  .faq .dev-toggle[open] summary::after{content:" ↑"}
+  .faq .pdf-link{display:inline-flex; align-items:center; gap:6px; margin-top:10px; font-size:13px;
+    color:var(--navy); font-weight:600; padding:6px 10px; background:#EFF1F7;
+    border:1px solid #E0E4EE; border-radius:8px; text-decoration:none}
+  .faq .pdf-link:hover{background:#E6EAF2; text-decoration:none}
+
+
   /* FOUNDER */
   section.founder{background:var(--paper); border-top:1px solid var(--line); border-bottom:1px solid var(--line); padding:64px 0}
   .founder-grid{display:grid; grid-template-columns:240px 1fr; gap:40px; align-items:center}
@@ -205,6 +236,63 @@
               </div>
               <a class="btn btn-primary" href="https://leadforge-rh03.onrender.com/checkout">Buy LeadForge →</a>
             </div>
+
+            <!-- FAQ — LeadForge -->
+            <div class="faq" aria-label="Frequently asked questions about LeadForge">
+              <div class="faq-title">Common Questions</div>
+
+              <details>
+                <summary>What does LeadForge actually do?</summary>
+                <div class="answer">
+                  <p>You give LeadForge a list of company websites. It tells you who works there, what those people do, how to reach them, and what the company actually sells. That's it.</p>
+                  <p>Imagine a spreadsheet of 500 dental-clinic websites with no names, emails, or phone numbers. LeadForge turns it into a clean spreadsheet of owner names, work emails, LinkedIn profiles, company size, and which prospects are actually a good fit. What used to take a VA a week takes about 90 seconds.</p>
+                  <details class="dev-toggle">
+                    <summary>For developers — technical version</summary>
+                    <p style="margin-top:8px">REST API performing domain-keyed B2B contact + firmographic enrichment plus a multi-step workflow runner. Bearer-token auth (<code>Authorization: Bearer &lt;key&gt;</code>), batched up to 50 domains per call, 20-step workflow runner, idempotent fulfillment, signed Stripe webhook for refund-driven key revocation. FastAPI on Render, SQLite on persistent disk.</p>
+                    <p>Try it: <a href="https://leadforge-rh03.onrender.com/docs" target="_blank" rel="noopener">Swagger docs →</a></p>
+                  </details>
+                  <a class="pdf-link" href="/leadforge_explained.pdf" target="_blank" rel="noopener">📄 Download the 1-page explainer (PDF)</a>
+                </div>
+              </details>
+
+              <details>
+                <summary>Do I need to know how to code?</summary>
+                <div class="answer">
+                  <p>No. Most buyers don't write a line of code. They hand the API key to: a virtual assistant, a Make.com or Zapier flow, a junior marketer, or ChatGPT/Claude — which can call the API for them. Paste websites in, get enriched leads back, drop them in your CRM. That's the whole loop.</p>
+                  <p>If you <em>do</em> code, the API is plain JSON over HTTPS. Two endpoints, no SDK required.</p>
+                </div>
+              </details>
+
+              <details>
+                <summary>How is this different from Clearbit or ZoomInfo?</summary>
+                <div class="answer">
+                  <p>Same kind of data. Different pricing model. Clearbit and ZoomInfo charge $1,000–$1,500/year (often much more) on annual contracts with seat fees and per-lead caps.</p>
+                  <p>LeadForge is <strong>$97 once</strong>. No subscription, no quotas to negotiate, no sales call. You pay one time and the key works forever.</p>
+                </div>
+              </details>
+
+              <details>
+                <summary>What do I get for $97 — is it really lifetime?</summary>
+                <div class="answer">
+                  <p>Yes. One-time $97. You receive a personal API key by email within 60 seconds of checkout. The key works as long as the service runs. No renewals, no upsells, no "lifetime means 12 months" tricks.</p>
+                  <p>Reasonable rate limits apply (it's flat-rate, so we cap abuse) — they're well above what a real operator needs.</p>
+                </div>
+              </details>
+
+              <details>
+                <summary>What if it doesn't work for me?</summary>
+                <div class="answer">
+                  <p>30-day money-back guarantee. Email <a href="mailto:support@boldguide.io">support@boldguide.io</a>, get a full refund, no questions. Your key is automatically deactivated when the refund processes — fair on both sides.</p>
+                </div>
+              </details>
+
+              <details>
+                <summary>How do I get my API key after I buy?</summary>
+                <div class="answer">
+                  <p>The moment Stripe confirms payment, you land on a thank-you page that shows your API key on screen and emails you a copy. No waiting, no manual fulfillment, no support ticket. If the email doesn't arrive in 5 minutes, check spam — and if it's still missing, email me directly.</p>
+                </div>
+              </details>
+            </div>
           </div>
         </article>
 
@@ -251,6 +339,56 @@
                 <div class="anchor-note">94% less · same outcome</div>
               </div>
               <a class="btn btn-amber" href="https://leadforge-rh03.onrender.com/checkout/adhd">Buy the full 150 →</a>
+            </div>
+
+            <!-- FAQ — ADHD Brain Unlock -->
+            <div class="faq" aria-label="Frequently asked questions about ADHD Brain Unlock">
+              <div class="faq-title">Common Questions</div>
+
+              <details>
+                <summary>What's actually inside the PDF?</summary>
+                <div class="answer">
+                  <p>150 copy-paste prompts organized into 8 categories built around how ADHD brains actually work: Morning Routine, Task Management, Focus &amp; Deep Work, Overcoming Overwhelm, Time Blocking, Habit Building, End-of-Day Review, and Weekly Planning — plus 6 bonus power tips.</p>
+                  <p>Each prompt is plug-and-play: paste it into ChatGPT (or Claude, or Gemini), swap out anything in [brackets] for your specifics, and let the AI walk you through the rest.</p>
+                </div>
+              </details>
+
+              <details>
+                <summary>Do I need to pay for ChatGPT or Claude to use these?</summary>
+                <div class="answer">
+                  <p>No. The free tiers of ChatGPT, Claude, and Gemini all work fine for these prompts. If you already pay for one, even better — it just runs faster. The prompts are model-agnostic on purpose.</p>
+                </div>
+              </details>
+
+              <details>
+                <summary>Will this actually work if I have ADHD and never finish anything?</summary>
+                <div class="answer">
+                  <p>That's exactly who I built it for. I have ADHD. Every prompt in the PDF is one I personally use to get unstuck — they're designed to do the planning, sequencing, and decision-making that ADHD brains burn out on.</p>
+                  <p>The point isn't to read the PDF cover-to-cover. It's to grab one prompt the moment you're stuck and let the AI think for you for 30 seconds.</p>
+                </div>
+              </details>
+
+              <details>
+                <summary>Why $27 instead of free or $497?</summary>
+                <div class="answer">
+                  <p>Free wouldn't get used — people don't open free PDFs. $497 productivity courses are bloated with content nobody finishes. $27 is the sweet spot: low enough to be a no-brainer, high enough that you'll actually open it.</p>
+                  <p>Try the <strong>5 free prompts</strong> via the email form above first if you want to test the format before buying.</p>
+                </div>
+              </details>
+
+              <details>
+                <summary>What if it's not for me?</summary>
+                <div class="answer">
+                  <p>24-hour money-back guarantee. Email <a href="mailto:support@boldguide.io">support@boldguide.io</a> within 24 hours of purchase and you get a full refund — no questions, no friction. Your download link is auto-deactivated when the refund processes.</p>
+                </div>
+              </details>
+
+              <details>
+                <summary>How do I download it after buying?</summary>
+                <div class="answer">
+                  <p>The moment Stripe confirms payment, you land on a thank-you page with the download button. The link is also emailed to you instantly. Link is good for 30 days and 10 downloads — plenty of room to save it across your devices.</p>
+                </div>
+              </details>
             </div>
           </div>
         </article>

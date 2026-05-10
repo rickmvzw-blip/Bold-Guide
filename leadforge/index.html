@@ -1,0 +1,476 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>LeadForge — B2B Lead Enrichment API · $97 lifetime · by Bold Guide LLC</title>
+<meta name="description" content="LeadForge: B2B lead enrichment API. Domains in, decision-makers + emails + LinkedIn + firmographics out. $97 one-time, lifetime access. Alternative to Clearbit / ZoomInfo annual contracts." />
+<meta property="og:title" content="LeadForge — B2B Lead Enrichment API · $97 lifetime" />
+<meta property="og:description" content="Domains in, decision-makers + emails + LinkedIn + firmographics out. $97 once. No subscription. 30-day refund." />
+<meta property="og:image" content="https://boldguide.io/leadforge_cover.png" />
+<meta property="og:type" content="product" />
+<meta property="og:url" content="https://boldguide.io/leadforge/" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="LeadForge — $97 B2B enrichment API · lifetime access" />
+<meta name="twitter:description" content="Skip the $1,200/yr Clearbit bill. JSON in, JSON out. 30-day refund." />
+<meta name="twitter:image" content="https://boldguide.io/leadforge_cover.png" />
+<meta name="robots" content="index,follow,max-image-preview:large" />
+<link rel="canonical" href="https://boldguide.io/leadforge/" />
+<link rel="icon" href="/logo.png" />
+
+<!-- Schema.org: LeadForge Product + Offer -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "name": "LeadForge — B2B Lead Enrichment API",
+  "image": "https://boldguide.io/leadforge_cover.png",
+  "description": "B2B lead enrichment API. Turn a list of company websites into decision-makers, emails, LinkedIn URLs, and firmographics. One-time $97 lifetime license — alternative to Clearbit and ZoomInfo annual subscriptions.",
+  "brand": { "@type": "Brand", "name": "Bold Guide" },
+  "sku": "BG-LEADFORGE-LIFETIME",
+  "category": "Software / B2B / Sales Intelligence",
+  "url": "https://boldguide.io/leadforge/",
+  "offers": {
+    "@type": "Offer",
+    "url": "https://leadforge-rh03.onrender.com/checkout",
+    "priceCurrency": "USD",
+    "price": "97.00",
+    "availability": "https://schema.org/InStock",
+    "priceValidUntil": "2026-12-31",
+    "seller": { "@type": "Organization", "name": "Bold Guide LLC" },
+    "hasMerchantReturnPolicy": {
+      "@type": "MerchantReturnPolicy",
+      "applicableCountry": "US",
+      "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+      "merchantReturnDays": 30,
+      "returnMethod": "https://schema.org/ReturnByMail",
+      "returnFees": "https://schema.org/FreeReturn"
+    }
+  }
+}
+</script>
+
+<style>
+  :root{
+    --navy:#1B2A4E; --navy-2:#243460; --amber:#E8A33D; --amber-2:#F2B85A;
+    --ink:#0F1626; --bg:#FBFAF7; --paper:#FFFFFF; --line:#E6E4DD;
+    --muted:#6B6F7A; --gray:#8B8B8B; --green:#1F7A4D;
+    --shadow: 0 1px 2px rgba(15,22,38,.04), 0 8px 24px rgba(15,22,38,.06);
+    --shadow-lg: 0 2px 4px rgba(15,22,38,.05), 0 24px 48px rgba(15,22,38,.10);
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0}
+  body{font-family:-apple-system,BlinkMacSystemFont,"Inter","Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    background:var(--bg); color:var(--ink); line-height:1.55; -webkit-font-smoothing:antialiased}
+  a{color:var(--navy); text-decoration:none}
+  a:hover{text-decoration:underline}
+  .wrap{max-width:1120px; margin:0 auto; padding:0 24px}
+
+  header.nav{position:sticky; top:0; z-index:50; background:rgba(251,250,247,.85); backdrop-filter:saturate(140%) blur(8px); border-bottom:1px solid var(--line)}
+  .nav-row{display:flex; align-items:center; justify-content:space-between; height:64px}
+  .brand{display:flex; align-items:center; gap:10px; font-weight:800; color:var(--navy); letter-spacing:.2px}
+  .brand .mark{width:28px; height:28px; border-radius:6px; background:var(--navy); color:#fff; display:grid; place-items:center; font-weight:900; font-size:14px; position:relative}
+  .brand .mark::after{content:""; position:absolute; width:6px; height:6px; border-radius:50%; background:var(--amber); top:6px; right:6px}
+  .nav-links{display:flex; gap:24px; align-items:center; font-size:14px; color:var(--muted)}
+  .nav-links a{color:var(--muted)}
+  .nav-links a:hover{color:var(--navy); text-decoration:none}
+  .breadcrumb{font-size:13px; color:var(--muted); padding:14px 0 0}
+  .breadcrumb a{color:var(--muted)}
+  .breadcrumb a:hover{color:var(--navy)}
+
+  .hero{padding:48px 0 32px}
+  .eyebrow{display:inline-flex; align-items:center; gap:8px; font-size:12px; letter-spacing:.12em; text-transform:uppercase; color:var(--muted); font-weight:600}
+  .eyebrow .dot{width:6px; height:6px; border-radius:50%; background:var(--amber)}
+  h1{font-size:clamp(36px,5.5vw,56px); line-height:1.06; letter-spacing:-.02em; margin:18px 0 18px; color:var(--navy); font-weight:800}
+  h1 .accent{color:var(--amber)}
+  .lede{font-size:19px; color:var(--muted); max-width:680px}
+  .hero-cta{display:flex; gap:14px; margin-top:28px; flex-wrap:wrap}
+  .btn{display:inline-flex; align-items:center; gap:8px; padding:12px 18px; border-radius:10px; font-weight:600; font-size:15px; border:1px solid transparent; cursor:pointer; transition:transform .08s ease, box-shadow .15s ease}
+  .btn:hover{text-decoration:none; transform:translateY(-1px)}
+  .btn-primary{background:var(--navy); color:#fff}
+  .btn-primary:hover{background:var(--navy-2); box-shadow:var(--shadow)}
+  .btn-ghost{background:transparent; color:var(--navy); border-color:var(--line)}
+  .btn-ghost:hover{border-color:var(--navy)}
+  .pills{display:flex; gap:10px; flex-wrap:wrap; margin-top:24px}
+  .pill{display:inline-flex; align-items:center; gap:8px; font-size:13px; color:var(--navy); background:var(--paper); border:1px solid var(--line); padding:8px 12px; border-radius:999px; font-weight:500}
+
+  /* Live receipts strip */
+  .receipts{background:var(--paper); border-top:1px solid var(--line); border-bottom:1px solid var(--line); padding:16px 0; margin-top:24px}
+  .receipts-row{display:flex; gap:32px; flex-wrap:wrap; align-items:center; justify-content:center; font-size:13.5px; color:var(--muted)}
+  .receipts-row strong{color:var(--navy); font-weight:700; font-variant-numeric:tabular-nums}
+  .receipts-row .sep{color:var(--gray)}
+  .receipts-row a{color:var(--muted); text-decoration:underline; text-decoration-color:var(--line)}
+
+  /* Sample output block */
+  section.sample-output{padding:64px 0 32px}
+  .section-head{margin:0 0 28px}
+  .section-head .kicker{font-size:12px; letter-spacing:.12em; text-transform:uppercase; color:var(--amber); font-weight:700}
+  .section-head h2{font-size:30px; letter-spacing:-.01em; margin:8px 0 8px; color:var(--navy)}
+  .section-head p{margin:0; color:var(--muted); font-size:15.5px; max-width:720px}
+  pre.code{background:#0F1626; color:#E8E6E0; padding:24px; border-radius:14px; overflow:auto; font-family:"SF Mono",ui-monospace,Menlo,Consolas,monospace; font-size:13px; line-height:1.55; box-shadow:var(--shadow); border:1px solid #243460}
+  pre.code .k{color:#F2B85A}
+  pre.code .s{color:#9DCFFF}
+  pre.code .c{color:#7B8BA3; font-style:italic}
+  pre.code .m{color:#7BD389}
+
+  /* Sourcing block */
+  section.sourcing{padding:32px 0}
+  .source-grid{display:grid; grid-template-columns:1fr 1fr; gap:32px}
+  @media (max-width:760px){.source-grid{grid-template-columns:1fr}}
+  .source-card{background:var(--paper); border:1px solid var(--line); border-radius:14px; padding:24px}
+  .source-card h3{margin:0 0 10px; color:var(--navy); font-size:18px}
+  .source-card p{margin:0 0 8px; color:var(--muted); font-size:14.5px}
+  .source-card ul{margin:0; padding-left:18px; color:var(--muted); font-size:14.5px}
+  .source-card li{margin-bottom:4px}
+
+  /* Try-before-buy */
+  section.try-it{padding:32px 0 48px}
+  .try-it-card{background:#FFFBF1; border:1px dashed #E8C77B; border-radius:14px; padding:28px}
+  .try-it-card h3{margin:0 0 10px; color:#7A5212; font-size:20px}
+  .try-it-card p{margin:0 0 10px; color:var(--ink); font-size:15px}
+  .try-it-card .small{font-size:13px; color:var(--muted)}
+
+  /* Pricing */
+  section.pricing{padding:32px 0}
+  .pricing-card{background:var(--paper); border:1px solid var(--line); border-radius:16px; padding:32px; box-shadow:var(--shadow); display:flex; flex-direction:column; gap:18px; max-width:680px; margin:0 auto}
+  .tag-row{display:flex; gap:8px; flex-wrap:wrap}
+  .tag{font-size:11px; letter-spacing:.08em; text-transform:uppercase; color:var(--navy); background:#EFF1F7; border:1px solid #E0E4EE; padding:4px 8px; border-radius:6px; font-weight:600}
+  .tag.amber{color:#7A5212; background:#FBEFD7; border-color:#F2DDA6}
+  .tag.green{color:#0F5C39; background:#DDEFE5; border-color:#B8DCC9}
+  .feature-list{margin:0; padding:0; list-style:none; display:grid; gap:8px}
+  .feature-list li{display:flex; gap:10px; align-items:flex-start; font-size:15px; color:var(--ink)}
+  .feature-list li::before{content:""; width:14px; height:14px; flex:none; margin-top:4px;
+    background:radial-gradient(circle at center, var(--amber) 0 38%, transparent 40%);
+    border:1.5px solid var(--navy); border-radius:50%}
+  .price-row{display:flex; align-items:baseline; justify-content:space-between; padding-top:18px; border-top:1px dashed var(--line); flex-wrap:wrap; gap:12px}
+  .price{font-size:32px; font-weight:800; color:var(--navy); letter-spacing:-.02em}
+  .price .unit{font-size:13px; color:var(--muted); font-weight:500; margin-left:6px}
+  .anchor{font-size:13px; color:var(--gray); text-decoration:line-through}
+  .anchor-note{font-size:13px; color:var(--green); font-weight:600}
+
+  /* FAQ */
+  section.faq-section{padding:48px 0}
+  .faq{border-top:1px solid var(--line)}
+  .faq details{border-bottom:1px solid var(--line)}
+  .faq details[open]{background:#FBF8F1}
+  .faq summary{list-style:none; cursor:pointer; padding:18px 8px 18px 36px; position:relative;
+    font-size:16px; font-weight:600; color:var(--navy); user-select:none}
+  .faq summary::-webkit-details-marker{display:none}
+  .faq summary::before{content:"+"; position:absolute; left:8px; top:50%; transform:translateY(-50%);
+    width:20px; height:20px; line-height:20px; text-align:center; border-radius:50%;
+    background:var(--amber); color:var(--ink); font-weight:900; font-size:14px}
+  .faq details[open] summary::before{content:"−"}
+  .faq .answer{padding:0 8px 18px 36px; color:var(--muted); font-size:15px; line-height:1.65}
+  .faq .answer p{margin:0 0 8px}
+  .faq .answer code{font-size:13px; background:#EFF1F7; padding:2px 6px; border-radius:4px; color:var(--navy)}
+  .faq .answer a{color:var(--navy); font-weight:600; text-decoration:underline}
+  .pdf-link{display:inline-flex; align-items:center; gap:6px; margin-top:10px; font-size:13px;
+    color:var(--navy); font-weight:600; padding:6px 10px; background:#EFF1F7;
+    border:1px solid #E0E4EE; border-radius:8px; text-decoration:none}
+
+  /* Founder mini */
+  section.founder-mini{background:var(--paper); border-top:1px solid var(--line); border-bottom:1px solid var(--line); padding:48px 0}
+  .founder-grid{display:grid; grid-template-columns:160px 1fr; gap:32px; align-items:center}
+  @media (max-width:760px){.founder-grid{grid-template-columns:1fr; text-align:center}}
+  .founder-grid img{width:160px; height:160px; border-radius:12px; object-fit:cover; border:1px solid var(--line); box-shadow:var(--shadow)}
+  .founder-grid h3{margin:0 0 10px; color:var(--navy); font-size:22px}
+  .founder-grid p{color:var(--muted); font-size:15px; margin:0 0 8px; max-width:560px}
+  .founder-grid .sig{margin-top:10px; font-family:Georgia, serif; font-style:italic; color:var(--navy); font-size:16px}
+
+  footer.foot{border-top:1px solid var(--line); padding:28px 0 56px; color:var(--muted); font-size:13px; background:var(--bg)}
+  .foot-row{display:flex; justify-content:space-between; align-items:center; gap:24px; flex-wrap:wrap}
+  .foot a{color:var(--muted)}
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap nav-row">
+    <a class="brand" href="/" aria-label="Bold Guide home">
+      <span class="mark">B</span>
+      <span>Bold Guide<span style="color:var(--gray); font-weight:600; margin-left:6px; font-size:12px;">LLC</span></span>
+    </a>
+    <nav class="nav-links">
+      <a href="/">Home</a>
+      <a href="/adhd150prompts/">ADHD Brain Unlock</a>
+      <a href="https://leadforge-rh03.onrender.com/docs" target="_blank" rel="noopener">API Docs</a>
+    </nav>
+  </div>
+</header>
+
+<div class="wrap breadcrumb">
+  <a href="/">Bold Guide LLC</a> · <span>LeadForge</span>
+</div>
+
+<main>
+  <section class="hero">
+    <div class="wrap">
+      <span class="eyebrow"><span class="dot"></span>Bold Guide LLC · LeadForge</span>
+      <h1>B2B contact data without the<br/><span class="accent">$1,200/yr Clearbit</span> bill.</h1>
+      <p class="lede">
+        LeadForge is a one-time-payment B2B enrichment API. Send a list of company domains, get back
+        decision-maker names, work emails, LinkedIn URLs, company size, industry, and HQ. JSON in, JSON out.
+        No seat fees, no quotas, no annual contract.
+      </p>
+      <div class="hero-cta">
+        <a class="btn btn-primary" href="#buy">Buy LeadForge — $97 →</a>
+        <a class="btn btn-ghost" href="#sample-output">See sample output</a>
+      </div>
+      <div class="pills">
+        <span class="pill">✓&nbsp;$97 once · lifetime</span>
+        <span class="pill">✓&nbsp;30-day refund · no questions</span>
+        <span class="pill">✓&nbsp;API key in your inbox in 60s</span>
+        <span class="pill">✓&nbsp;Stripe-secured</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- LIVE RECEIPTS STRIP (auto-populated from /stats) -->
+  <div class="receipts" aria-label="Live numbers">
+    <div class="wrap receipts-row">
+      <span><strong id="stat-domains">—</strong> domains enriched</span>
+      <span class="sep">·</span>
+      <span><strong id="stat-keys">—</strong> active API keys</span>
+      <span class="sep">·</span>
+      <span><strong id="stat-latency">—</strong> ms median response</span>
+      <span class="sep">·</span>
+      <a href="https://leadforge-rh03.onrender.com/stats" target="_blank" rel="noopener">live numbers →</a>
+    </div>
+  </div>
+
+  <!-- SEE EXACTLY WHAT YOU GET -->
+  <section class="sample-output" id="sample-output">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="kicker">See exactly what you get</div>
+        <h2>Real sample output for 5 known domains</h2>
+        <p>No vague "we have data on millions of companies." Here is the actual response shape LeadForge returns. Paste this into your CRM, your spreadsheet, your AI agent — it's plain JSON.</p>
+      </div>
+<pre class="code"><span class="c">// POST https://leadforge-rh03.onrender.com/api/enrich</span>
+<span class="c">// Authorization: Bearer &lt;your-key&gt;</span>
+{
+  <span class="k">"domains"</span>: [<span class="s">"stripe.com"</span>, <span class="s">"figma.com"</span>, <span class="s">"notion.so"</span>, <span class="s">"linear.app"</span>, <span class="s">"supabase.com"</span>]
+}
+
+<span class="c">// Response (truncated for clarity — actual response includes all 5)</span>
+{
+  <span class="k">"stripe.com"</span>: {
+    <span class="k">"company"</span>: {
+      <span class="k">"name"</span>: <span class="s">"Stripe, Inc."</span>,
+      <span class="k">"size"</span>: <span class="s">"5,000–10,000"</span>,
+      <span class="k">"industry"</span>: <span class="s">"Financial Services / Payments"</span>,
+      <span class="k">"founded"</span>: <span class="m">2010</span>,
+      <span class="k">"hq"</span>: <span class="s">"South San Francisco, CA"</span>,
+      <span class="k">"linkedin"</span>: <span class="s">"linkedin.com/company/stripe"</span>
+    },
+    <span class="k">"contacts"</span>: [
+      {
+        <span class="k">"name"</span>: <span class="s">"[example contact]"</span>,
+        <span class="k">"title"</span>: <span class="s">"VP of Sales"</span>,
+        <span class="k">"email"</span>: <span class="s">"v***@stripe.com"</span>,
+        <span class="k">"linkedin"</span>: <span class="s">"linkedin.com/in/..."</span>,
+        <span class="k">"confidence"</span>: <span class="m">0.92</span>
+      }
+    ]
+  },
+  <span class="k">"figma.com"</span>: { <span class="c">/* same shape */</span> },
+  <span class="k">"notion.so"</span>: { <span class="c">/* same shape */</span> },
+  <span class="k">"linear.app"</span>: { <span class="c">/* same shape */</span> },
+  <span class="k">"supabase.com"</span>: { <span class="c">/* same shape */</span> },
+
+  <span class="k">"_meta"</span>: {
+    <span class="k">"requested"</span>: <span class="m">5</span>,
+    <span class="k">"matched"</span>: <span class="m">5</span>,
+    <span class="k">"latency_ms"</span>: <span class="m">412</span>
+  }
+}</pre>
+      <p style="font-size:13px; color:var(--muted); margin-top:14px">Want the full response (all 5 domains, every field)? <a href="mailto:support@boldguide.io?subject=LeadForge%20full%20sample" style="color:var(--navy); text-decoration:underline">Email me</a> and I'll send it.</p>
+    </div>
+  </section>
+
+  <!-- WHERE THE DATA COMES FROM -->
+  <section class="sourcing">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="kicker">Where the data comes from</div>
+        <h2>Sourcing, in plain English.</h2>
+        <p>Buyers pay $1,200+/yr for Clearbit and ZoomInfo because they need to know what's behind the data. Same standard here.</p>
+      </div>
+      <div class="source-grid">
+        <div class="source-card">
+          <h3>Company firmographics</h3>
+          <p>Name, size, industry, founding year, HQ, and LinkedIn page are pulled from a combination of:</p>
+          <ul>
+            <li>Public company websites (parsed for "About" / footer / structured data)</li>
+            <li>Public LinkedIn company pages</li>
+            <li>Public business registries (where applicable)</li>
+            <li>Open-data firmographic providers</li>
+          </ul>
+        </div>
+        <div class="source-card">
+          <h3>Contact records</h3>
+          <p>Decision-maker names, titles, work emails, and LinkedIn URLs are sourced from public-facing professional profiles and validated through deliverability checks before they're returned.</p>
+          <p>Each contact ships with a <code>confidence</code> score (0–1). Anything below the configured threshold is flagged so you can decide whether to use it. No fake-looking emails padded into your batch to inflate match rate.</p>
+        </div>
+      </div>
+      <p style="font-size:13px; color:var(--muted); margin-top:18px; max-width:720px">LeadForge does not sell, store long-term, or remarket personal data sourced from your queries. Enrichment is performed per-request and scoped to the domains you submit.</p>
+    </div>
+  </section>
+
+  <!-- TRY BEFORE YOU BUY -->
+  <section class="try-it">
+    <div class="wrap">
+      <div class="try-it-card">
+        <h3>Try 5 free enrichments before you buy</h3>
+        <p>Don't take the sample on faith — test it on your own pipeline.
+          Email me your top 5 prospect domains and I'll run them through LeadForge and send the JSON back within 24 hours. No upsell, no follow-up sequence.</p>
+        <p><a class="btn btn-primary" href="mailto:support@boldguide.io?subject=5%20free%20LeadForge%20enrichments&body=Hi%20Ricardo%2C%20here%20are%205%20domains%20to%20enrich%3A%0A%0A1.%20%0A2.%20%0A3.%20%0A4.%20%0A5.%20%0A%0AThanks%21">Email 5 domains →</a></p>
+        <p class="small">Or jump straight in: <a href="https://leadforge-rh03.onrender.com/checkout" style="color:var(--navy); text-decoration:underline; font-weight:600">buy LeadForge — $97</a> · 30-day refund means there's no risk.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRICING / BUY -->
+  <section class="pricing" id="buy">
+    <div class="wrap">
+      <div class="pricing-card">
+        <div class="tag-row">
+          <span class="tag">SaaS · API</span>
+          <span class="tag amber">Lifetime access</span>
+          <span class="tag green">30-day refund</span>
+        </div>
+        <h2 style="margin:0; color:var(--navy); font-size:26px; letter-spacing:-.01em">LeadForge — Lifetime Access</h2>
+        <ul class="feature-list">
+          <li>Bulk enrichment up to 50 domains per request</li>
+          <li>Workflow runner — chain up to 20 steps (fetch, transform, send)</li>
+          <li>10,000 requests / month rate limit (well above what real operators need)</li>
+          <li>Live API key emailed instantly after checkout</li>
+          <li>Comparable enrichment for the records that matter to most operators</li>
+          <li>Swagger docs · Stripe-secured · pay-once, no subscription</li>
+          <li>30-day money-back guarantee — key auto-deactivates on refund</li>
+        </ul>
+        <div class="price-row">
+          <div>
+            <div class="anchor">Clearbit / ZoomInfo: $1,200+/yr</div>
+            <div class="price">$97 <span class="unit">one-time · lifetime</span></div>
+            <div class="anchor-note">Save $1,100+ in year 1</div>
+          </div>
+          <a class="btn btn-primary" href="https://leadforge-rh03.onrender.com/checkout">Buy LeadForge →</a>
+        </div>
+        <a class="pdf-link" href="/leadforge_explained.pdf" target="_blank" rel="noopener">📄 Download the 1-page explainer (PDF)</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="faq-section">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="kicker">Common questions</div>
+        <h2>Before you buy.</h2>
+      </div>
+      <div class="faq" aria-label="LeadForge FAQ">
+
+        <details>
+          <summary>What does LeadForge actually do?</summary>
+          <div class="answer">
+            <p>You give LeadForge a list of company websites. It tells you who works there, what those people do, how to reach them, and what the company actually sells. That's it.</p>
+            <p>Imagine a spreadsheet of 500 dental-clinic websites with no names, emails, or phone numbers. LeadForge turns it into a clean spreadsheet of owner names, work emails, LinkedIn profiles, company size, and which prospects are actually a good fit. What used to take a VA a week takes about 90 seconds.</p>
+            <p>For developers: REST API, bearer-token auth, batched up to 50 domains/call, 20-step workflow runner, idempotent fulfillment. <a href="https://leadforge-rh03.onrender.com/docs" target="_blank" rel="noopener">Swagger docs →</a></p>
+          </div>
+        </details>
+
+        <details>
+          <summary>Do I need to know how to code?</summary>
+          <div class="answer">
+            <p>No. Most buyers don't write a line of code. They hand the API key to: a virtual assistant, a Make.com or Zapier flow, a junior marketer, or ChatGPT/Claude — which can call the API for them. Paste websites in, get enriched leads back, drop them in your CRM.</p>
+            <p>If you do code, the API is plain JSON over HTTPS. Two endpoints, no SDK required.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary>How is this different from Clearbit or ZoomInfo?</summary>
+          <div class="answer">
+            <p>Comparable enrichment for the records that matter to most operators. Different pricing model. Clearbit and ZoomInfo charge $1,000–$1,500/year (often much more) on annual contracts with seat fees and per-lead caps.</p>
+            <p>LeadForge is <strong>$97 once</strong>. No subscription, no quotas to negotiate, no sales call. You pay one time and the key works forever.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary>What do I get for $97 — is it really lifetime?</summary>
+          <div class="answer">
+            <p>Yes. One-time $97. You receive a personal API key by email within 60 seconds of checkout. The key works as long as the service runs. No renewals, no upsells, no "lifetime means 12 months" tricks.</p>
+            <p>Rate limit is <strong>10,000 requests / month, 50 domains / request</strong> — well above what a real operator needs. If you hit it consistently, email me and we'll figure something out.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary>What if it doesn't work for me?</summary>
+          <div class="answer">
+            <p>30-day money-back guarantee. Email <a href="mailto:support@boldguide.io">support@boldguide.io</a>, get a full refund, no questions. Your key is automatically deactivated when the refund processes — fair on both sides.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary>How do I get my API key after I buy?</summary>
+          <div class="answer">
+            <p>The moment Stripe confirms payment, you land on a thank-you page that shows your API key on screen and emails you a copy. No waiting, no manual fulfillment, no support ticket. If the email doesn't arrive in 5 minutes, check spam — and if it's still missing, email me directly.</p>
+          </div>
+        </details>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FOUNDER MINI -->
+  <section class="founder-mini">
+    <div class="wrap founder-grid">
+      <img src="/ricardo.jpg" alt="Ricardo Montoya, founder of Bold Guide LLC" />
+      <div>
+        <span class="eyebrow"><span class="dot"></span>Built by a solo founder</span>
+        <h3 style="margin-top:10px">I built LeadForge because I refused to pay $1,200/yr for data I only sometimes needed.</h3>
+        <p>25+ years running retail and sales teams taught me one thing: most B2B "data platforms" are priced for procurement departments, not for the people who actually use the data. LeadForge is what I wanted: a flat fee, a clean API, no quarterly upsell call.</p>
+        <p>Email me directly if anything's broken — <a href="mailto:support@boldguide.io">support@boldguide.io</a>.</p>
+        <div class="sig">— Ricardo, Bold Guide LLC</div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="wrap foot-row">
+    <div>© <span id="yr"></span> Bold Guide LLC · All rights reserved</div>
+    <div>
+      <a href="/">Home</a> ·
+      <a href="/adhd150prompts/">ADHD Brain Unlock</a> ·
+      <a href="mailto:support@boldguide.io">support@boldguide.io</a> ·
+      <a href="https://leadforge-rh03.onrender.com/docs" target="_blank" rel="noopener">API Docs</a> ·
+      <a href="https://leadforge-rh03.onrender.com/stats" target="_blank" rel="noopener">Live Numbers</a> ·
+      <a href="/privacy.html">Privacy</a> ·
+      <a href="/terms.html">Terms</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('yr').textContent = new Date().getFullYear();
+
+  // Live receipts — best-effort fetch from /stats. Falls back silently if blocked.
+  (async () => {
+    try {
+      const res = await fetch('https://leadforge-rh03.onrender.com/stats', {headers:{'Accept':'application/json'}});
+      if (!res.ok) return;
+      const data = await res.json();
+      const setIf = (id, val) => {
+        const el = document.getElementById(id);
+        if (el && val !== undefined && val !== null) el.textContent = Number(val).toLocaleString();
+      };
+      // Tolerant of multiple possible shapes from /stats
+      setIf('stat-domains', data.domains_enriched ?? data.total_enriched ?? data.enriched ?? data.domains);
+      setIf('stat-keys',    data.active_keys     ?? data.keys_active    ?? data.active_api_keys);
+      setIf('stat-latency', data.median_latency_ms ?? data.median_ms    ?? data.p50_ms);
+    } catch (e) { /* silent */ }
+  })();
+</script>
+</body>
+</html>

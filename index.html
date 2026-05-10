@@ -96,6 +96,36 @@
 }
 </script>
 
+<!-- Schema.org: Web Dev · Design · Deploy (Service) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Web Dev · Design · Deploy",
+  "serviceType": "Web design and development",
+  "provider": { "@type": "Organization", "name": "Bold Guide LLC" },
+  "areaServed": "US",
+  "availableLanguage": ["en", "es"],
+  "url": "https://boldguide.io/web-design/",
+  "offers": [
+    {
+      "@type": "Offer",
+      "name": "Premium 4-Week Build",
+      "price": "997.00",
+      "priceCurrency": "USD",
+      "url": "https://boldguide.io/web-design/"
+    },
+    {
+      "@type": "Offer",
+      "name": "À La Carte",
+      "price": "169.99",
+      "priceCurrency": "USD",
+      "url": "https://boldguide.io/web-design/"
+    }
+  ]
+}
+</script>
+
 <!-- Schema.org: FAQPage (combined LeadForge + ADHD) -->
 <script type="application/ld+json">
 {
@@ -183,8 +213,14 @@
   .section-head{display:flex; align-items:end; justify-content:space-between; margin:0 0 28px; flex-wrap:wrap; gap:12px}
   .section-head h2{font-size:28px; letter-spacing:-.01em; margin:0; color:var(--navy)}
   .section-head .meta{color:var(--muted); font-size:14px}
-  .grid{display:grid; grid-template-columns:1fr 1fr; gap:24px}
-  @media (max-width:860px){.grid{grid-template-columns:1fr}}
+  .grid{display:grid; grid-template-columns:repeat(3,1fr); gap:24px}
+  @media (max-width:1100px){.grid{grid-template-columns:1fr 1fr}}
+  @media (max-width:760px){.grid{grid-template-columns:1fr}}
+  .card .cover-card{aspect-ratio:16/10; width:100%; display:flex; align-items:center; justify-content:center; flex-direction:column; gap:6px; color:#FBFAF7; background:radial-gradient(circle at 30% 30%, rgba(232,163,61,0.35), transparent 55%), linear-gradient(135deg, #1B2A4E 0%, #0F1A33 100%); border-bottom:1px solid var(--line); text-align:center; padding:18px}
+  .card .cover-card .cc-brand{font-family:'Playfair Display',serif; font-size:1.5rem; letter-spacing:0.18em; font-weight:700}
+  .card .cover-card .cc-brand .cc-dot{color:#E8A33D}
+  .card .cover-card .cc-tag{font-size:0.7rem; letter-spacing:0.28em; color:#E8A33D; font-weight:600; text-transform:uppercase}
+  .card .cover-card .cc-foot{font-size:0.65rem; letter-spacing:0.22em; color:rgba(251,250,247,0.65); margin-top:6px}
 
   .card{background:var(--paper); border:1px solid var(--line); border-radius:16px; overflow:hidden; display:flex; flex-direction:column; transition:transform .15s ease, box-shadow .2s ease, border-color .2s ease}
   .card:hover{transform:translateY(-2px); box-shadow:var(--shadow-lg); border-color:#D9D5C7}
@@ -299,8 +335,9 @@
       <span class="eyebrow"><span class="dot"></span>Bold Guide LLC · Solo-built. Buyer-tested.</span>
       <h1>Tools that get you<br/><span class="accent">unstuck</span> — and shipped.</h1>
       <p class="lede">
-        Two products. No subscriptions. No "seat tiers." A B2B lead enrichment API for operators
-        who hate $1,200/yr CRM bills, and a 150-prompt playbook that turns ADHD into a competitive edge.
+        Two products and a freelance build service. A B2B lead enrichment API for operators who
+        hate $1,200/yr CRM bills, a 150-prompt playbook that turns ADHD into a competitive edge,
+        and an EN/ES web design service for owners who need a real site without an agency invoice.
       </p>
       <div class="hero-cta">
         <a class="btn btn-primary" href="#products">See the products →</a>
@@ -510,6 +547,45 @@
                   <p>The moment Stripe confirms payment, you land on a thank-you page with the download button. The link is also emailed to you instantly. Link is good for 30 days and 10 downloads — plenty of room to save it across your devices.</p>
                 </div>
               </details>
+            </div>
+          </div>
+        </article>
+
+        <!-- Web Dev · Design · Deploy (Freelance Service) -->
+        <article class="card" id="web-design">
+          <div class="cover-card" aria-label="Bold Guide — Web Dev · Design · Deploy">
+            <div class="cc-tag">Web Dev · Design · Deploy</div>
+            <div class="cc-brand">BOLD<span class="cc-dot">·</span>GUIDE</div>
+            <div class="cc-foot">— Solo-built. Buyer-tested. —</div>
+          </div>
+          <div class="body">
+            <div class="pain-hook">
+              <strong>Need a real website without an agency price tag?</strong>
+              I design, build, and deploy your site end-to-end. Two packages: $169.99 à la carte or $997 premium 4-week build.
+            </div>
+            <div class="tag-row">
+              <span class="tag">Freelance service</span>
+              <span class="tag amber">EN / ES</span>
+              <span class="tag green">Contract-backed</span>
+            </div>
+            <h3>Web Dev · Design · Deploy</h3>
+            <p style="font-style:italic; color:var(--navy); font-weight:500;">"A site that ships, looks the part, and earns trust — without the agency invoice."</p>
+            <p>Independent web service from the founder of Bold Guide LLC. Branding, build, deployment, and social setup. Pay per piece or get the full premium build with Stripe, Google Workspace, and social launch included.</p>
+            <ul class="feature-list">
+              <li><strong>Premium Build — $997</strong> · 4 weeks · ~32 hrs · 3 major revisions · Stripe + Google Workspace + 4 social platforms</li>
+              <li><strong>À La Carte — from $169.99</strong> · single-page build · 1 major revision · add what you need</li>
+              <li><strong>Add-ons:</strong> weekly maintenance $60/wk · social setup $40/platform (10 platforms supported)</li>
+              <li>Contract-backed in English &amp; Spanish · 50/50 payment on Premium</li>
+              <li>Direct line to the founder — no account managers, no handoffs</li>
+            </ul>
+
+            <div class="price-row">
+              <div class="price-block">
+                <div class="anchor">Typical agency build: $5,000+</div>
+                <div class="price">$997 <span class="unit">premium · 4-week build</span></div>
+                <div class="anchor-note">or à la carte from $169.99</div>
+              </div>
+              <a class="btn btn-primary" href="/web-design/">See packages →</a>
             </div>
           </div>
         </article>

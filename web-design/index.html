@@ -1,0 +1,646 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Web Design · Develop · Deploy — by Bold Guide LLC · Solo-built, buyer-tested</title>
+<meta name="description" content="Freelance web design, development, and deployment by Bold Guide LLC. Premium $997 4-week builds and à-la-carte websites from $169.99. Built by a solo founder in California. EN / ES." />
+<meta property="og:title" content="Web Dev · Design · Deploy — Bold Guide LLC" />
+<meta property="og:description" content="Premium 4-week web builds from $997. À la carte sites from $169.99. Solo-built. Buyer-tested. Available in English and Spanish." />
+<meta property="og:image" content="https://boldguide.io/og-image.png" />
+<meta property="og:type" content="product" />
+<meta property="og:url" content="https://boldguide.io/web-design/" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Web Dev · Design · Deploy — Bold Guide LLC" />
+<meta name="twitter:description" content="Premium 4-week web builds from $997. À la carte sites from $169.99. EN / ES." />
+<meta name="twitter:image" content="https://boldguide.io/og-image.png" />
+<meta name="robots" content="index,follow,max-image-preview:large" />
+<link rel="canonical" href="https://boldguide.io/web-design/" />
+<link rel="alternate" hreflang="en" href="https://boldguide.io/web-design/" />
+<link rel="alternate" hreflang="es" href="https://boldguide.io/web-design/?lang=es" />
+<link rel="icon" href="/logo.png" />
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Bold Guide LLC — Web Design, Development & Deployment",
+  "provider": {
+    "@type": "Organization",
+    "name": "Bold Guide LLC",
+    "url": "https://boldguide.io/",
+    "telephone": "+1-951-544-9913",
+    "email": "ricardo@boldguide.io",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "P.O. Box 312",
+      "addressLocality": "Rialto",
+      "addressRegion": "CA",
+      "postalCode": "92377",
+      "addressCountry": "US"
+    }
+  },
+  "serviceType": "Web design, web development, deployment, social media setup",
+  "areaServed": "US",
+  "availableLanguage": ["en","es"],
+  "offers": [
+    {
+      "@type": "Offer",
+      "name": "Premium 4-Week Build",
+      "price": "997.00",
+      "priceCurrency": "USD",
+      "description": "Complete website build, deployment, Google Workspace setup, Stripe integration, and social account setup. ~8 hours/week for 4 weeks."
+    },
+    {
+      "@type": "Offer",
+      "name": "À La Carte Base",
+      "price": "169.99",
+      "priceCurrency": "USD",
+      "description": "Base website creation, deployment, and live testing. One major revision included. Add-ons available."
+    }
+  ]
+}
+</script>
+
+<style>
+  :root{
+    --navy:#1B2A4E; --navy-2:#243460; --amber:#E8A33D; --amber-2:#F2B85A;
+    --ink:#0F1626; --bg:#FBFAF7; --paper:#FFFFFF; --line:#E6E4DD;
+    --muted:#6B6F7A; --gray:#8B8B8B; --green:#1F7A4D;
+    --shadow: 0 1px 2px rgba(15,22,38,.04), 0 8px 24px rgba(15,22,38,.06);
+    --shadow-lg: 0 2px 4px rgba(15,22,38,.05), 0 24px 48px rgba(15,22,38,.10);
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0}
+  body{font-family:-apple-system,BlinkMacSystemFont,"Inter","Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    background:var(--bg); color:var(--ink); line-height:1.55; -webkit-font-smoothing:antialiased}
+  a{color:var(--navy); text-decoration:none}
+  a:hover{text-decoration:underline}
+  .wrap{max-width:1120px; margin:0 auto; padding:0 24px}
+
+  /* i18n show/hide */
+  html[lang="en"] [data-lang="es"]{display:none}
+  html[lang="es"] [data-lang="en"]{display:none}
+
+  header.nav{position:sticky; top:0; z-index:50; background:rgba(251,250,247,.85); backdrop-filter:saturate(140%) blur(8px); border-bottom:1px solid var(--line)}
+  .nav-row{display:flex; align-items:center; justify-content:space-between; height:64px; gap:16px}
+  .brand{display:flex; align-items:center; gap:10px; font-weight:800; color:var(--navy); letter-spacing:.2px}
+  .brand .mark{width:28px; height:28px; border-radius:6px; background:var(--navy); color:#fff; display:grid; place-items:center; font-weight:900; font-size:14px; position:relative}
+  .brand .mark::after{content:""; position:absolute; width:6px; height:6px; border-radius:50%; background:var(--amber); top:6px; right:6px}
+  .nav-links{display:flex; gap:18px; align-items:center; font-size:14px; color:var(--muted)}
+  .nav-links a{color:var(--muted)}
+  .nav-links a:hover{color:var(--navy); text-decoration:none}
+  @media (max-width:640px){.nav-links a:not(.lang-toggle){display:none}}
+
+  .lang-toggle{display:inline-flex; align-items:center; gap:0; border:1px solid var(--line); border-radius:999px; background:var(--paper); overflow:hidden; font-size:12px; font-weight:700; letter-spacing:.06em}
+  .lang-toggle button{appearance:none; background:transparent; border:0; padding:6px 12px; color:var(--muted); cursor:pointer; font:inherit}
+  .lang-toggle button.active{background:var(--navy); color:#fff}
+  .lang-toggle button:not(.active):hover{color:var(--navy)}
+
+  .breadcrumb{font-size:13px; color:var(--muted); padding:14px 0 0}
+  .breadcrumb a{color:var(--muted)}
+
+  .hero{padding:48px 0 32px}
+  .hero-grid{display:grid; grid-template-columns:1.2fr 1fr; gap:48px; align-items:center}
+  @media (max-width:860px){.hero-grid{grid-template-columns:1fr}}
+  .eyebrow{display:inline-flex; align-items:center; gap:8px; font-size:12px; letter-spacing:.12em; text-transform:uppercase; color:var(--muted); font-weight:600}
+  .eyebrow .dot{width:6px; height:6px; border-radius:50%; background:var(--amber)}
+  h1{font-size:clamp(36px,5.2vw,52px); line-height:1.06; letter-spacing:-.02em; margin:18px 0 18px; color:var(--navy); font-weight:800}
+  h1 .accent{color:var(--amber)}
+  .lede{font-size:18px; color:var(--muted); max-width:580px}
+  .hero-cta{display:flex; gap:14px; margin-top:24px; flex-wrap:wrap}
+  .btn{display:inline-flex; align-items:center; gap:8px; padding:12px 18px; border-radius:10px; font-weight:600; font-size:15px; border:1px solid transparent; cursor:pointer; transition:transform .08s ease, box-shadow .15s ease}
+  .btn:hover{text-decoration:none; transform:translateY(-1px)}
+  .btn-primary{background:var(--navy); color:#fff}
+  .btn-primary:hover{background:var(--navy-2); box-shadow:var(--shadow)}
+  .btn-amber{background:var(--amber); color:var(--ink)}
+  .btn-amber:hover{background:var(--amber-2); box-shadow:var(--shadow)}
+  .btn-ghost{background:transparent; color:var(--navy); border-color:var(--line)}
+  .btn-ghost:hover{border-color:var(--navy)}
+  .pills{display:flex; gap:10px; flex-wrap:wrap; margin-top:20px}
+  .pill{display:inline-flex; align-items:center; gap:8px; font-size:13px; color:var(--navy); background:var(--paper); border:1px solid var(--line); padding:8px 12px; border-radius:999px; font-weight:500}
+
+  /* Hero card (no image — branded SVG-style box) */
+  .hero-card{background:linear-gradient(155deg,#1B2A4E 0%, #243460 60%, #14223F 100%); border-radius:16px; box-shadow:var(--shadow-lg); border:1px solid #243460; padding:32px; color:#fff; aspect-ratio:4/3; display:flex; flex-direction:column; justify-content:space-between; position:relative; overflow:hidden}
+  .hero-card::before{content:""; position:absolute; inset:auto -20% -40% auto; width:280px; height:280px; border-radius:50%; background:radial-gradient(circle, rgba(232,163,61,.35) 0%, rgba(232,163,61,0) 70%)}
+  .hero-card .bg-mark{font-weight:900; font-size:32px; letter-spacing:.04em; color:#fff; position:relative}
+  .hero-card .bg-mark .dot{color:var(--amber)}
+  .hero-card h2{font-size:30px; font-weight:800; letter-spacing:.04em; color:#fff; margin:0 0 6px; line-height:1.1; position:relative}
+  .hero-card .sub{color:var(--amber-2); font-weight:700; letter-spacing:.18em; font-size:13px; text-transform:uppercase; position:relative}
+  .hero-card .tagline{color:#C9CCD3; font-style:italic; font-size:14px; margin-top:18px; position:relative}
+
+  /* Two-package grid */
+  section.packages{padding:48px 0}
+  .section-head{margin:0 0 28px; max-width:720px}
+  .section-head .kicker{font-size:12px; letter-spacing:.12em; text-transform:uppercase; color:var(--amber); font-weight:700}
+  .section-head h2{font-size:30px; letter-spacing:-.01em; margin:8px 0 8px; color:var(--navy)}
+  .section-head p{margin:0; color:var(--muted); font-size:15.5px}
+  .pkg-grid{display:grid; grid-template-columns:1fr 1fr; gap:24px}
+  @media (max-width:860px){.pkg-grid{grid-template-columns:1fr}}
+  .pkg{background:var(--paper); border:1px solid var(--line); border-radius:16px; padding:28px; display:flex; flex-direction:column; gap:14px; box-shadow:var(--shadow); transition:transform .15s ease, box-shadow .2s ease}
+  .pkg:hover{transform:translateY(-2px); box-shadow:var(--shadow-lg)}
+  .pkg.premium{border-color:var(--amber)}
+  .tag-row{display:flex; gap:8px; flex-wrap:wrap}
+  .tag{font-size:11px; letter-spacing:.08em; text-transform:uppercase; color:var(--navy); background:#EFF1F7; border:1px solid #E0E4EE; padding:4px 8px; border-radius:6px; font-weight:600}
+  .tag.amber{color:#7A5212; background:#FBEFD7; border-color:#F2DDA6}
+  .tag.green{color:#0F5C39; background:#DDEFE5; border-color:#B8DCC9}
+  .pkg h3{margin:0; color:var(--navy); font-size:22px; letter-spacing:-.01em}
+  .pkg .price{font-size:34px; font-weight:800; color:var(--navy); letter-spacing:-.02em}
+  .pkg .price .unit{font-size:13px; color:var(--muted); font-weight:500; margin-left:6px}
+  .pkg .desc{color:var(--muted); font-size:14.5px; margin:0}
+  .feature-list{margin:0; padding:0; list-style:none; display:grid; gap:8px}
+  .feature-list li{display:flex; gap:10px; align-items:flex-start; font-size:14.5px; color:var(--ink)}
+  .feature-list li::before{content:""; width:14px; height:14px; flex:none; margin-top:4px;
+    background:radial-gradient(circle at center, var(--amber) 0 38%, transparent 40%);
+    border:1.5px solid var(--navy); border-radius:50%}
+  .pkg .footnote{font-size:12.5px; color:var(--gray); line-height:1.5; margin-top:6px}
+
+  /* Add-ons table */
+  section.addons{padding:32px 0 48px}
+  .addon-card{background:#FFFBF1; border:1px dashed #E8C77B; border-radius:14px; padding:24px}
+  .addon-card h3{margin:0 0 8px; color:#7A5212; font-size:18px}
+  .addon-card .desc{color:var(--ink); font-size:14.5px; margin:0 0 14px}
+  .addon-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:10px}
+  @media (max-width:760px){.addon-grid{grid-template-columns:repeat(2,1fr)}}
+  @media (max-width:480px){.addon-grid{grid-template-columns:1fr}}
+  .addon{background:#fff; border:1px solid var(--line); border-radius:10px; padding:10px 12px; font-size:13.5px; color:var(--navy); display:flex; justify-content:space-between; align-items:center; gap:8px}
+  .addon .p{color:var(--amber); font-weight:700; font-size:13px}
+
+  /* Process */
+  section.process{padding:48px 0; background:var(--paper); border-top:1px solid var(--line); border-bottom:1px solid var(--line)}
+  .step-grid{display:grid; grid-template-columns:repeat(4,1fr); gap:18px}
+  @media (max-width:860px){.step-grid{grid-template-columns:repeat(2,1fr)}}
+  @media (max-width:480px){.step-grid{grid-template-columns:1fr}}
+  .step{background:var(--bg); border:1px solid var(--line); border-radius:12px; padding:18px}
+  .step .num{display:inline-grid; place-items:center; width:28px; height:28px; border-radius:50%; background:var(--amber); color:var(--ink); font-weight:900; font-size:13px}
+  .step h4{margin:10px 0 6px; color:var(--navy); font-size:16px}
+  .step p{margin:0; font-size:13.5px; color:var(--muted); line-height:1.55}
+
+  /* FAQ */
+  section.faq-section{padding:48px 0}
+  .faq{border-top:1px solid var(--line)}
+  .faq details{border-bottom:1px solid var(--line)}
+  .faq details[open]{background:#FBF8F1}
+  .faq summary{list-style:none; cursor:pointer; padding:18px 8px 18px 36px; position:relative;
+    font-size:16px; font-weight:600; color:var(--navy); user-select:none}
+  .faq summary::-webkit-details-marker{display:none}
+  .faq summary::before{content:"+"; position:absolute; left:8px; top:50%; transform:translateY(-50%);
+    width:20px; height:20px; line-height:20px; text-align:center; border-radius:50%;
+    background:var(--amber); color:var(--ink); font-weight:900; font-size:14px}
+  .faq details[open] summary::before{content:"−"}
+  .faq .answer{padding:0 8px 18px 36px; color:var(--muted); font-size:15px; line-height:1.65}
+  .faq .answer p{margin:0 0 8px}
+  .faq .answer a{color:var(--navy); font-weight:600; text-decoration:underline}
+
+  /* Contact CTA */
+  section.cta-band{padding:56px 0; background:var(--navy); color:#fff}
+  .cta-band h2{margin:0 0 10px; color:#fff; font-size:30px; letter-spacing:-.01em}
+  .cta-band p{margin:0 0 24px; color:#C9CCD3; font-size:16px; max-width:620px}
+  .cta-row{display:flex; gap:14px; flex-wrap:wrap; align-items:center}
+  .cta-band .btn-amber{background:var(--amber); color:var(--ink)}
+  .cta-band .contact-line{color:#C9CCD3; font-size:14.5px; margin-top:16px}
+  .cta-band .contact-line a{color:var(--amber-2); text-decoration:none}
+  .cta-band .contact-line a:hover{text-decoration:underline}
+
+  /* Founder */
+  section.founder-mini{background:var(--paper); border-top:1px solid var(--line); border-bottom:1px solid var(--line); padding:48px 0}
+  .founder-grid{display:grid; grid-template-columns:160px 1fr; gap:32px; align-items:center}
+  @media (max-width:760px){.founder-grid{grid-template-columns:1fr; text-align:center}}
+  .founder-grid img{width:160px; height:160px; border-radius:12px; object-fit:cover; border:1px solid var(--line); box-shadow:var(--shadow)}
+  .founder-grid h3{margin:0 0 10px; color:var(--navy); font-size:22px}
+  .founder-grid p{color:var(--muted); font-size:15px; margin:0 0 8px; max-width:560px}
+  .founder-grid .sig{margin-top:10px; font-family:Georgia, serif; font-style:italic; color:var(--navy); font-size:16px}
+
+  footer.foot{border-top:1px solid var(--line); padding:28px 0 56px; color:var(--muted); font-size:13px; background:var(--bg)}
+  .foot-row{display:flex; justify-content:space-between; align-items:center; gap:24px; flex-wrap:wrap}
+  .foot a{color:var(--muted)}
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap nav-row">
+    <a class="brand" href="/" aria-label="Bold Guide home">
+      <span class="mark">B</span>
+      <span>Bold Guide<span style="color:var(--gray); font-weight:600; margin-left:6px; font-size:12px;">LLC</span></span>
+    </a>
+    <nav class="nav-links">
+      <a href="/">Home</a>
+      <a href="/leadforge/">LeadForge</a>
+      <a href="/adhd150prompts/">ADHD Brain Unlock</a>
+      <div class="lang-toggle" role="group" aria-label="Language">
+        <button type="button" id="btn-en" class="active" aria-pressed="true">EN</button>
+        <button type="button" id="btn-es" aria-pressed="false">ES</button>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<div class="wrap breadcrumb">
+  <a href="/">Bold Guide LLC</a> · <span data-lang="en">Web Design · Develop · Deploy</span><span data-lang="es">Diseño · Desarrollo · Despliegue Web</span>
+</div>
+
+<main>
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <span class="eyebrow"><span class="dot"></span>
+          <span data-lang="en">Bold Guide LLC · Freelance web services</span>
+          <span data-lang="es">Bold Guide LLC · Servicios web freelance</span>
+        </span>
+        <h1>
+          <span data-lang="en">Websites that <span class="accent">ship</span> —<br/>not websites that drag.</span>
+          <span data-lang="es">Sitios que se <span class="accent">lanzan</span> —<br/>no sitios que se atascan.</span>
+        </h1>
+        <p class="lede">
+          <span data-lang="en">Web design, development, and deployment by one founder. Two ways to work with me: a 4-week premium build, or à-la-carte work paid only for what you need. Solo-built. Buyer-tested.</span>
+          <span data-lang="es">Diseño, desarrollo y despliegue web por un fundador. Dos formas de trabajar conmigo: una build premium de 4 semanas, o servicios à-la-carte pagando solo por lo que necesitas. Construido por un fundador. Probado por clientes.</span>
+        </p>
+        <div class="hero-cta">
+          <a class="btn btn-primary" href="#packages">
+            <span data-lang="en">See packages →</span>
+            <span data-lang="es">Ver paquetes →</span>
+          </a>
+          <a class="btn btn-ghost" href="#contact">
+            <span data-lang="en">Book a free consult</span>
+            <span data-lang="es">Agenda una consulta gratis</span>
+          </a>
+        </div>
+        <div class="pills">
+          <span class="pill">
+            <span data-lang="en">✓&nbsp;Real contracts, plain English / Español</span>
+            <span data-lang="es">✓&nbsp;Contratos reales, en Inglés o Español</span>
+          </span>
+          <span class="pill">
+            <span data-lang="en">✓&nbsp;Built &amp; deployed by Ricardo</span>
+            <span data-lang="es">✓&nbsp;Construido y desplegado por Ricardo</span>
+          </span>
+          <span class="pill">
+            <span data-lang="en">✓&nbsp;California-based · serves US clients</span>
+            <span data-lang="es">✓&nbsp;Basado en California · sirve clientes en EE.UU.</span>
+          </span>
+        </div>
+      </div>
+      <div>
+        <div class="hero-card" aria-hidden="true">
+          <div class="bg-mark">BOLD GUIDE<span class="dot">.</span></div>
+          <div>
+            <div class="sub">Web Dev · Design · Deploy</div>
+            <h2>boldguide.io</h2>
+            <div class="tagline">— Solo-built. Buyer-tested. —</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PACKAGES -->
+  <section class="packages" id="packages">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="kicker">
+          <span data-lang="en">Two ways to work together</span>
+          <span data-lang="es">Dos formas de trabajar juntos</span>
+        </div>
+        <h2>
+          <span data-lang="en">Pick the package that fits your stage.</span>
+          <span data-lang="es">Elige el paquete que se ajusta a tu etapa.</span>
+        </h2>
+        <p>
+          <span data-lang="en">Both packages include a real signed contract before any work begins. Both come in English or Spanish.</span>
+          <span data-lang="es">Ambos paquetes incluyen un contrato firmado antes de comenzar. Ambos disponibles en Inglés o Español.</span>
+        </p>
+      </div>
+
+      <div class="pkg-grid">
+
+        <!-- PREMIUM -->
+        <article class="pkg premium">
+          <div class="tag-row">
+            <span class="tag amber">
+              <span data-lang="en">Premium · 4-week build</span>
+              <span data-lang="es">Premium · build de 4 semanas</span>
+            </span>
+            <span class="tag green">
+              <span data-lang="en">Best for established businesses</span>
+              <span data-lang="es">Ideal para negocios establecidos</span>
+            </span>
+          </div>
+          <h3>
+            <span data-lang="en">Premium 4-Week Build</span>
+            <span data-lang="es">Build Premium de 4 Semanas</span>
+          </h3>
+          <div class="price">$997 <span class="unit" data-lang="en">· 4 weeks · ~32 hours</span><span class="unit" data-lang="es">· 4 semanas · ~32 horas</span></div>
+          <p class="desc">
+            <span data-lang="en">Complete website build with payments, email, and social presence configured end-to-end. ~8 hours/week for 4 weeks.</span>
+            <span data-lang="es">Build completo del sitio con pagos, correo y presencia social configurados de principio a fin. ~8 horas/semana durante 4 semanas.</span>
+          </p>
+          <ul class="feature-list">
+            <li><span data-lang="en">Website creation, deployment, and live testing</span><span data-lang="es">Creación, despliegue y pruebas en vivo del sitio</span></li>
+            <li><span data-lang="en">Up to 3 major revisions during the contract</span><span data-lang="es">Hasta 3 revisiones mayores durante el contrato</span></li>
+            <li><span data-lang="en">Weekly minor changes &amp; updates for 4 weeks</span><span data-lang="es">Cambios y actualizaciones menores semanales durante 4 semanas</span></li>
+            <li><span data-lang="en">Business social accounts: Facebook, Instagram, Pinterest, X (Twitter)</span><span data-lang="es">Cuentas sociales de negocio: Facebook, Instagram, Pinterest, X (Twitter)</span></li>
+            <li><span data-lang="en">Google Workspace setup (email + productivity)</span><span data-lang="es">Configuración de Google Workspace (correo + productividad)</span></li>
+            <li><span data-lang="en">Stripe payments integration on the site</span><span data-lang="es">Integración de pagos Stripe en el sitio</span></li>
+          </ul>
+          <p class="footnote">
+            <span data-lang="en">Payment: 50% deposit ($498.50) at signing · 50% ($498.50) at launch. Client owns all final assets and accounts.</span>
+            <span data-lang="es">Pago: 50% de depósito ($498.50) al firmar · 50% ($498.50) al lanzamiento. El cliente es propietario de todos los activos y cuentas finales.</span>
+          </p>
+          <a class="btn btn-primary" href="#contact">
+            <span data-lang="en">Book a free consult →</span>
+            <span data-lang="es">Agenda una consulta gratis →</span>
+          </a>
+        </article>
+
+        <!-- À LA CARTE -->
+        <article class="pkg">
+          <div class="tag-row">
+            <span class="tag">
+              <span data-lang="en">À la carte · pay per piece</span>
+              <span data-lang="es">À la carte · paga por pieza</span>
+            </span>
+            <span class="tag green">
+              <span data-lang="en">Best for solo founders &amp; small teams</span>
+              <span data-lang="es">Ideal para fundadores solos y equipos pequeños</span>
+            </span>
+          </div>
+          <h3>
+            <span data-lang="en">À La Carte Website</span>
+            <span data-lang="es">Sitio Web À La Carte</span>
+          </h3>
+          <div class="price"><span data-lang="en">From $169.99</span><span data-lang="es">Desde $169.99</span> <span class="unit" data-lang="en">· base + add-ons</span><span class="unit" data-lang="es">· base + extras</span></div>
+          <p class="desc">
+            <span data-lang="en">Start with a clean base site. Add only the pieces you need, when you need them — no bundles you'll never use.</span>
+            <span data-lang="es">Empieza con un sitio base limpio. Agrega solo las piezas que necesitas, cuando las necesitas — sin paquetes que no usarás.</span>
+          </p>
+          <ul class="feature-list">
+            <li><span data-lang="en"><strong>$169.99 base</strong> — website creation, deployment, live testing</span><span data-lang="es"><strong>$169.99 base</strong> — creación, despliegue y pruebas en vivo del sitio</span></li>
+            <li><span data-lang="en">One (1) major revision included</span><span data-lang="es">Una (1) revisión mayor incluida</span></li>
+            <li><span data-lang="en">Add weekly maintenance, social setup, or one-off changes — see add-on menu below</span><span data-lang="es">Agrega mantenimiento semanal, configuración social o cambios puntuales — ver menú de extras abajo</span></li>
+          </ul>
+          <p class="footnote">
+            <span data-lang="en">Payment: $169.99 due at signing. Add-ons billed separately as selected.</span>
+            <span data-lang="es">Pago: $169.99 al firmar. Los extras se facturan por separado según se seleccionen.</span>
+          </p>
+          <a class="btn btn-amber" href="#contact">
+            <span data-lang="en">Book a free consult →</span>
+            <span data-lang="es">Agenda una consulta gratis →</span>
+          </a>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ADD-ON MENU -->
+  <section class="addons">
+    <div class="wrap">
+      <div class="addon-card">
+        <h3>
+          <span data-lang="en">À la carte add-on menu</span>
+          <span data-lang="es">Menú de extras à la carte</span>
+        </h3>
+        <p class="desc">
+          <span data-lang="en">Stackable on top of the $169.99 base. Pay only for what you check.</span>
+          <span data-lang="es">Apilables sobre la base de $169.99. Paga solo por lo que marques.</span>
+        </p>
+        <div class="addon-grid">
+          <div class="addon"><span data-lang="en">Weekly maintenance (2 hrs/wk)</span><span data-lang="es">Mantenimiento semanal (2 hrs/sem)</span><span class="p" data-lang="en">$60/wk</span><span class="p" data-lang="es">$60/sem</span></div>
+          <div class="addon"><span>Facebook</span><span class="p">$40</span></div>
+          <div class="addon"><span>Instagram</span><span class="p">$40</span></div>
+          <div class="addon"><span>Pinterest</span><span class="p">$40</span></div>
+          <div class="addon"><span>X (Twitter)</span><span class="p">$40</span></div>
+          <div class="addon"><span>LinkedIn</span><span class="p">$40</span></div>
+          <div class="addon"><span>TikTok</span><span class="p">$40</span></div>
+          <div class="addon"><span>YouTube</span><span class="p">$40</span></div>
+          <div class="addon"><span>Threads</span><span class="p">$40</span></div>
+          <div class="addon"><span>Google Business Profile</span><span class="p">$40</span></div>
+          <div class="addon"><span>Snapchat</span><span class="p">$40</span></div>
+        </div>
+        <p class="footnote" style="margin-top:12px; color:var(--gray); font-size:12.5px">
+          <span data-lang="en">Client is responsible for third-party costs (domain, hosting, Google Workspace, Stripe fees, etc.). Major revisions beyond what's included are billed at the hourly rate stated in the signed contract.</span>
+          <span data-lang="es">El cliente es responsable de los costos de terceros (dominio, hospedaje, Google Workspace, comisiones de Stripe, etc.). Las revisiones mayores adicionales se facturan a la tarifa por hora indicada en el contrato firmado.</span>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESS -->
+  <section class="process">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="kicker">
+          <span data-lang="en">How it works</span>
+          <span data-lang="es">Cómo funciona</span>
+        </div>
+        <h2>
+          <span data-lang="en">From "let's talk" to live site.</span>
+          <span data-lang="es">De "hablemos" a sitio en vivo.</span>
+        </h2>
+      </div>
+      <div class="step-grid">
+        <div class="step">
+          <span class="num">1</span>
+          <h4><span data-lang="en">Free consult</span><span data-lang="es">Consulta gratis</span></h4>
+          <p><span data-lang="en">A 20-minute call. Tell me what you sell, who your customer is, and what's broken about your current site (if any).</span><span data-lang="es">Una llamada de 20 minutos. Cuéntame qué vendes, quién es tu cliente y qué está mal con tu sitio actual (si lo tienes).</span></p>
+        </div>
+        <div class="step">
+          <span class="num">2</span>
+          <h4><span data-lang="en">Signed contract</span><span data-lang="es">Contrato firmado</span></h4>
+          <p><span data-lang="en">You pick Premium or À La Carte. Real contract in English or Spanish. Deposit secures your slot.</span><span data-lang="es">Eliges Premium o À La Carte. Contrato real en Inglés o Español. El depósito asegura tu lugar.</span></p>
+        </div>
+        <div class="step">
+          <span class="num">3</span>
+          <h4><span data-lang="en">Build &amp; review</span><span data-lang="es">Build y revisión</span></h4>
+          <p><span data-lang="en">You hand off brand assets and feedback within 72 hours. I build, deploy to staging, and walk you through every revision round.</span><span data-lang="es">Me entregas activos de marca y feedback en 72 horas. Yo construyo, despliego a staging y te guío en cada revisión.</span></p>
+        </div>
+        <div class="step">
+          <span class="num">4</span>
+          <h4><span data-lang="en">Launch · you own it</span><span data-lang="es">Lanzamiento · es tuyo</span></h4>
+          <p><span data-lang="en">Site goes live on your domain. Final 50% due. All accounts (social, Workspace, Stripe) are in your name and stay yours.</span><span data-lang="es">El sitio se lanza en tu dominio. Se paga el 50% final. Todas las cuentas (sociales, Workspace, Stripe) están a tu nombre y permanecen tuyas.</span></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="faq-section">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="kicker">
+          <span data-lang="en">Common questions</span>
+          <span data-lang="es">Preguntas frecuentes</span>
+        </div>
+        <h2>
+          <span data-lang="en">Before you book.</span>
+          <span data-lang="es">Antes de reservar.</span>
+        </h2>
+      </div>
+      <div class="faq" aria-label="FAQ">
+
+        <details>
+          <summary><span data-lang="en">Who owns the website and accounts when we're done?</span><span data-lang="es">¿Quién es propietario del sitio y las cuentas al terminar?</span></summary>
+          <div class="answer">
+            <p data-lang="en">You do. Per both contracts: upon final payment, the client owns all custom website content. Social media, Google Workspace, and Stripe accounts are created in your name and stay your property — even if we stop working together.</p>
+            <p data-lang="es">Tú. Según ambos contratos: al pago final, el cliente es propietario de todo el contenido del sitio. Las cuentas de redes sociales, Google Workspace y Stripe se crean a tu nombre y permanecen tu propiedad — incluso si dejamos de trabajar juntos.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary><span data-lang="en">What's the difference between Premium and À La Carte?</span><span data-lang="es">¿Cuál es la diferencia entre Premium y À La Carte?</span></summary>
+          <div class="answer">
+            <p data-lang="en"><strong>Premium ($997)</strong> is a 4-week, 32-hour engagement where I run the whole launch — site, email, payments, four social accounts, plus weekly minor updates during the build. Best when you're launching a business or rebuilding a tired site.</p>
+            <p data-lang="en"><strong>À La Carte ($169.99 base)</strong> is for when you only need a clean website now and want to add maintenance or social setup only if/when you need it. Pay only for what you check.</p>
+            <p data-lang="es"><strong>Premium ($997)</strong> es un compromiso de 4 semanas y 32 horas donde manejo todo el lanzamiento — sitio, correo, pagos, cuatro cuentas sociales, más actualizaciones menores semanales durante el build. Ideal cuando lanzas un negocio o reconstruyes un sitio cansado.</p>
+            <p data-lang="es"><strong>À La Carte ($169.99 base)</strong> es para cuando solo necesitas un sitio web limpio ahora y quieres agregar mantenimiento o setup social solo si/cuando lo necesites. Paga solo por lo que marques.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary><span data-lang="en">What costs are NOT included?</span><span data-lang="es">¿Qué costos NO están incluidos?</span></summary>
+          <div class="answer">
+            <p data-lang="en">Third-party services you'd be paying for anyway: domain registration (e.g. yourname.com), web hosting, Google Workspace licenses, Stripe processing fees, and any software/plugins your specific business needs. These are paid directly by you to those vendors so the accounts stay 100% yours.</p>
+            <p data-lang="es">Servicios de terceros que pagarías de cualquier forma: registro de dominio (ej. tunombre.com), hospedaje web, licencias de Google Workspace, comisiones de Stripe y cualquier software/plugin que tu negocio específico requiera. Estos se pagan directamente por ti a esos proveedores para que las cuentas permanezcan 100% tuyas.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary><span data-lang="en">How many revisions do I get?</span><span data-lang="es">¿Cuántas revisiones recibo?</span></summary>
+          <div class="answer">
+            <p data-lang="en">Premium includes 3 major revisions. À La Carte includes 1 major revision. A "major revision" means a substantial change to structure, design, or content sections. Additional major revisions are billed at the hourly rate written into your signed contract.</p>
+            <p data-lang="es">Premium incluye 3 revisiones mayores. À La Carte incluye 1 revisión mayor. Una "revisión mayor" significa un cambio sustancial de estructura, diseño o secciones de contenido. Las revisiones adicionales se facturan a la tarifa por hora indicada en tu contrato firmado.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary><span data-lang="en">How fast do you respond, and what do you need from me?</span><span data-lang="es">¿Qué tan rápido respondes y qué necesitas de mí?</span></summary>
+          <div class="answer">
+            <p data-lang="en">I respond to project messages within 24 hours on weekdays. I need brand assets (logos, copy, images), account access when relevant, and feedback within ~72 hours during the build. Late client feedback may extend the 4-week timeline — that's the only thing that pushes launches.</p>
+            <p data-lang="es">Respondo mensajes del proyecto en menos de 24 horas en días hábiles. Necesito activos de marca (logos, textos, imágenes), acceso a cuentas cuando aplique, y feedback en ~72 horas durante el build. El feedback tardío puede extender el plazo de 4 semanas — eso es lo único que retrasa los lanzamientos.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary><span data-lang="en">What if I want to stop?</span><span data-lang="es">¿Qué pasa si quiero detener el trabajo?</span></summary>
+          <div class="answer">
+            <p data-lang="en">Either side can terminate the agreement (or any weekly service) with 7 days' written notice. Fees for completed work are non-refundable, and the deposit is non-refundable once work has started.</p>
+            <p data-lang="es">Cualquiera de las partes puede dar por terminado el acuerdo (o cualquier servicio semanal) con 7 días de aviso por escrito. Los honorarios por trabajo completado no son reembolsables, y el depósito no es reembolsable una vez iniciado el trabajo.</p>
+          </div>
+        </details>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT BAND -->
+  <section class="cta-band" id="contact">
+    <div class="wrap">
+      <h2>
+        <span data-lang="en">Let's get your site live.</span>
+        <span data-lang="es">Pongamos tu sitio en vivo.</span>
+      </h2>
+      <p>
+        <span data-lang="en">20-minute free consult. I'll tell you which package fits, what realistic launch dates look like, and walk you through the contract — no pressure.</span>
+        <span data-lang="es">Consulta gratis de 20 minutos. Te diré qué paquete encaja, fechas realistas de lanzamiento, y revisamos el contrato juntos — sin presión.</span>
+      </p>
+      <div class="cta-row">
+        <a class="btn btn-amber" href="mailto:ricardo@boldguide.io?subject=Bold%20Guide%20web%20design%20consult&body=Hi%20Ricardo%2C%0A%0AI%27d%20like%20to%20talk%20about%20a%20website.%20My%20business%20does%3A%20%5Bshort%20description%5D.%20I%27m%20leaning%20toward%3A%20%5BPremium%20%2F%20%C3%80%20La%20Carte%5D.%0A%0AThanks%21">
+          <span data-lang="en">Email Ricardo →</span>
+          <span data-lang="es">Escribir a Ricardo →</span>
+        </a>
+        <a class="btn btn-ghost" style="background:transparent; color:#fff; border-color:rgba(255,255,255,.3)" href="tel:+19515449913">
+          <span data-lang="en">📞 Call (951) 544-9913</span>
+          <span data-lang="es">📞 Llamar al (951) 544-9913</span>
+        </a>
+      </div>
+      <p class="contact-line">
+        <a href="mailto:ricardo@boldguide.io">ricardo@boldguide.io</a> · <a href="tel:+19515449913">(951) 544-9913</a> · P.O. Box 312, Rialto, CA 92377
+      </p>
+    </div>
+  </section>
+
+  <!-- FOUNDER -->
+  <section class="founder-mini">
+    <div class="wrap founder-grid">
+      <img src="/ricardo.jpg" alt="Ricardo Montoya, founder of Bold Guide LLC" />
+      <div>
+        <span class="eyebrow"><span class="dot"></span>
+          <span data-lang="en">Built by a solo founder</span>
+          <span data-lang="es">Hecho por un fundador independiente</span>
+        </span>
+        <h3 style="margin-top:10px">
+          <span data-lang="en">I'm Ricardo. I build, design, and deploy — end to end.</span>
+          <span data-lang="es">Soy Ricardo. Yo construyo, diseño y despliego — de principio a fin.</span>
+        </h3>
+        <p>
+          <span data-lang="en">25+ years in retail and sales leadership taught me one thing: businesses don't need fancier sites, they need sites that ship and convert. Bold Guide LLC is a one-founder studio — no agency middlemen, no overseas hand-offs. You talk to me, I write the code, I push it live.</span>
+          <span data-lang="es">25+ años en liderazgo de retail y ventas me enseñaron una cosa: los negocios no necesitan sitios más sofisticados, necesitan sitios que se lancen y conviertan. Bold Guide LLC es un estudio de un fundador — sin intermediarios de agencia, sin entregas al extranjero. Hablas conmigo, yo escribo el código, yo lo lanzo.</span>
+        </p>
+        <div class="sig">— Ricardo, Bold Guide LLC</div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="wrap foot-row">
+    <div>© <span id="yr"></span> Bold Guide LLC · All rights reserved · P.O. Box 312, Rialto, CA 92377</div>
+    <div>
+      <a href="/">Home</a> ·
+      <a href="/leadforge/">LeadForge</a> ·
+      <a href="/adhd150prompts/">ADHD Brain Unlock</a> ·
+      <a href="mailto:ricardo@boldguide.io">ricardo@boldguide.io</a> ·
+      <a href="/privacy.html">Privacy</a> ·
+      <a href="/terms.html">Terms</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('yr').textContent = new Date().getFullYear();
+
+  // i18n toggle
+  (function(){
+    const html = document.documentElement;
+    const btnEn = document.getElementById('btn-en');
+    const btnEs = document.getElementById('btn-es');
+    const KEY = 'bg.lang';
+
+    function setLang(lang){
+      const l = (lang === 'es') ? 'es' : 'en';
+      html.setAttribute('lang', l);
+      btnEn.classList.toggle('active', l === 'en');
+      btnEs.classList.toggle('active', l === 'es');
+      btnEn.setAttribute('aria-pressed', l === 'en');
+      btnEs.setAttribute('aria-pressed', l === 'es');
+      try { localStorage.setItem(KEY, l); } catch(e){}
+      // Update URL ?lang= without reload, helps share links
+      try {
+        const u = new URL(window.location.href);
+        if (l === 'es') u.searchParams.set('lang','es'); else u.searchParams.delete('lang');
+        window.history.replaceState({}, '', u.toString());
+      } catch(e){}
+    }
+
+    // Initial: URL param > localStorage > navigator.language
+    let initial = null;
+    try {
+      const u = new URL(window.location.href);
+      initial = u.searchParams.get('lang');
+    } catch(e){}
+    if (!initial) {
+      try { initial = localStorage.getItem(KEY); } catch(e){}
+    }
+    if (!initial) {
+      const nav = (navigator.language || 'en').toLowerCase();
+      initial = nav.startsWith('es') ? 'es' : 'en';
+    }
+    setLang(initial);
+
+    btnEn.addEventListener('click', () => setLang('en'));
+    btnEs.addEventListener('click', () => setLang('es'));
+  })();
+</script>
+</body>
+</html>

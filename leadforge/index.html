@@ -79,6 +79,9 @@
   .breadcrumb a:hover{color:var(--navy)}
 
   .hero{padding:48px 0 32px}
+  .hero-grid{display:grid; grid-template-columns:1.2fr 1fr; gap:48px; align-items:center}
+  @media (max-width:860px){.hero-grid{grid-template-columns:1fr}}
+  .hero-img{width:100%; border-radius:16px; box-shadow:var(--shadow-lg); border:1px solid var(--line); display:block}
   .eyebrow{display:inline-flex; align-items:center; gap:8px; font-size:12px; letter-spacing:.12em; text-transform:uppercase; color:var(--muted); font-weight:600}
   .eyebrow .dot{width:6px; height:6px; border-radius:50%; background:var(--amber)}
   h1{font-size:clamp(36px,5.5vw,56px); line-height:1.06; letter-spacing:-.02em; margin:18px 0 18px; color:var(--navy); font-weight:800}
@@ -204,23 +207,28 @@
 
 <main>
   <section class="hero">
-    <div class="wrap">
-      <span class="eyebrow"><span class="dot"></span>Bold Guide LLC · LeadForge</span>
-      <h1>B2B contact data without the<br/><span class="accent">$1,200/yr Clearbit</span> bill.</h1>
-      <p class="lede">
-        LeadForge is a one-time-payment B2B enrichment API. Send a list of company domains, get back
-        decision-maker names, work emails, LinkedIn URLs, company size, industry, and HQ. JSON in, JSON out.
-        No seat fees, no quotas, no annual contract.
-      </p>
-      <div class="hero-cta">
-        <a class="btn btn-primary" href="#buy">Buy LeadForge — $97 →</a>
-        <a class="btn btn-ghost" href="#sample-output">See sample output</a>
+    <div class="wrap hero-grid">
+      <div>
+        <span class="eyebrow"><span class="dot"></span>Bold Guide LLC · LeadForge</span>
+        <h1>B2B contact data without the<br/><span class="accent">$1,200/yr Clearbit</span> bill.</h1>
+        <p class="lede">
+          LeadForge is a one-time-payment B2B enrichment API. Send a list of company domains, get back
+          decision-maker names, work emails, LinkedIn URLs, company size, industry, and HQ. JSON in, JSON out.
+          No seat fees, no quotas, no annual contract.
+        </p>
+        <div class="hero-cta">
+          <a class="btn btn-primary" href="#buy">Buy LeadForge — $97 →</a>
+          <a class="btn btn-ghost" href="#sample-output">See sample output</a>
+        </div>
+        <div class="pills">
+          <span class="pill">✓&nbsp;$97 once · lifetime</span>
+          <span class="pill">✓&nbsp;30-day refund · no questions</span>
+          <span class="pill">✓&nbsp;API key in your inbox in 60s</span>
+          <span class="pill">✓&nbsp;Stripe-secured</span>
+        </div>
       </div>
-      <div class="pills">
-        <span class="pill">✓&nbsp;$97 once · lifetime</span>
-        <span class="pill">✓&nbsp;30-day refund · no questions</span>
-        <span class="pill">✓&nbsp;API key in your inbox in 60s</span>
-        <span class="pill">✓&nbsp;Stripe-secured</span>
+      <div>
+        <img class="hero-img" src="/leadforge_cover.png" alt="LeadForge — B2B Lead Enrichment API" />
       </div>
     </div>
   </section>

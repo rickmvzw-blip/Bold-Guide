@@ -16,6 +16,11 @@
     <priority>0.95</priority>
   </url>
   <url>
+    <loc>https://boldguide.io/web-design/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+  </url>
+  <url>
     <loc>https://boldguide.io/leadforge-vs-clearbit.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>

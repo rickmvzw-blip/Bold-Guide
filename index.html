@@ -101,8 +101,9 @@
 {
   "@context": "https://schema.org",
   "@type": "Service",
-  "name": "Web Dev · Design · Deploy",
+  "name": "Bold Presence — Web Dev · Design · Deploy",
   "serviceType": "Web design and development",
+  "image": "https://boldguide.io/webdesign_cover.png",
   "provider": { "@type": "Organization", "name": "Bold Guide LLC" },
   "areaServed": "US",
   "availableLanguage": ["en", "es"],
@@ -216,11 +217,6 @@
   .grid{display:grid; grid-template-columns:repeat(3,1fr); gap:24px}
   @media (max-width:1100px){.grid{grid-template-columns:1fr 1fr}}
   @media (max-width:760px){.grid{grid-template-columns:1fr}}
-  .card .cover-card{aspect-ratio:16/10; width:100%; display:flex; align-items:center; justify-content:center; flex-direction:column; gap:6px; color:#FBFAF7; background:radial-gradient(circle at 30% 30%, rgba(232,163,61,0.35), transparent 55%), linear-gradient(135deg, #1B2A4E 0%, #0F1A33 100%); border-bottom:1px solid var(--line); text-align:center; padding:18px}
-  .card .cover-card .cc-brand{font-family:'Playfair Display',serif; font-size:1.5rem; letter-spacing:0.18em; font-weight:700}
-  .card .cover-card .cc-brand .cc-dot{color:#E8A33D}
-  .card .cover-card .cc-tag{font-size:0.7rem; letter-spacing:0.28em; color:#E8A33D; font-weight:600; text-transform:uppercase}
-  .card .cover-card .cc-foot{font-size:0.65rem; letter-spacing:0.22em; color:rgba(251,250,247,0.65); margin-top:6px}
 
   .card{background:var(--paper); border:1px solid var(--line); border-radius:16px; overflow:hidden; display:flex; flex-direction:column; transition:transform .15s ease, box-shadow .2s ease, border-color .2s ease}
   .card:hover{transform:translateY(-2px); box-shadow:var(--shadow-lg); border-color:#D9D5C7}
@@ -551,13 +547,9 @@
           </div>
         </article>
 
-        <!-- Web Dev · Design · Deploy (Freelance Service) -->
+        <!-- Bold Presence — Web Dev · Design · Deploy (Freelance Service) -->
         <article class="card" id="web-design">
-          <div class="cover-card" aria-label="Bold Guide — Web Dev · Design · Deploy">
-            <div class="cc-tag">Web Dev · Design · Deploy</div>
-            <div class="cc-brand">BOLD<span class="cc-dot">·</span>GUIDE</div>
-            <div class="cc-foot">— Solo-built. Buyer-tested. —</div>
-          </div>
+          <img class="cover" src="/webdesign_cover.png" alt="Bold Presence — Web Dev · Design · Deploy" />
           <div class="body">
             <div class="pain-hook">
               <strong>Need a real website without an agency price tag?</strong>
@@ -568,8 +560,8 @@
               <span class="tag amber">EN / ES</span>
               <span class="tag green">Contract-backed</span>
             </div>
-            <h3>Web Dev · Design · Deploy</h3>
-            <p style="font-style:italic; color:var(--navy); font-weight:500;">"A site that ships, looks the part, and earns trust — without the agency invoice."</p>
+            <h3>Bold Presence — Web Dev · Design · Deploy</h3>
+            <p style="font-style:italic; color:var(--navy); font-weight:500;">"Sites that ship. Brands that earn trust — without the agency invoice."</p>
             <p>Independent web service from the founder of Bold Guide LLC. Branding, build, deployment, and social setup. Pay per piece or get the full premium build with Stripe, Google Workspace, and social launch included.</p>
             <ul class="feature-list">
               <li><strong>Premium Build — $997</strong> · 4 weeks · ~32 hrs · 3 major revisions · Stripe + Google Workspace + 4 social platforms</li>

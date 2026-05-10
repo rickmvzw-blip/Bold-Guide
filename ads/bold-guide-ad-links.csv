@@ -1,0 +1,36 @@
+Product,Channel,UTM Source,UTM Medium,UTM Campaign,Full URL
+Bold Guide LLC (main),Direct / business card,,,,https://boldguide.io/
+Bold Guide LLC (main),Facebook Ads,facebook,paid_social,brand_2026q2,https://boldguide.io/?utm_source=facebook&utm_medium=paid_social&utm_campaign=brand_2026q2
+Bold Guide LLC (main),Instagram Ads,instagram,paid_social,brand_2026q2,https://boldguide.io/?utm_source=instagram&utm_medium=paid_social&utm_campaign=brand_2026q2
+Bold Guide LLC (main),LinkedIn Ads,linkedin,paid_social,brand_2026q2,https://boldguide.io/?utm_source=linkedin&utm_medium=paid_social&utm_campaign=brand_2026q2
+Bold Guide LLC (main),Google Ads,google,cpc,brand_2026q2,https://boldguide.io/?utm_source=google&utm_medium=cpc&utm_campaign=brand_2026q2
+Bold Guide LLC (main),Email signature,email,signature,evergreen,https://boldguide.io/?utm_source=email&utm_medium=signature&utm_campaign=evergreen
+,,,,,
+LeadForge,Direct,,,,https://boldguide.io/leadforge/
+LeadForge,LinkedIn Ads,linkedin,paid_social,leadforge_launch_2026q2,https://boldguide.io/leadforge/?utm_source=linkedin&utm_medium=paid_social&utm_campaign=leadforge_launch_2026q2
+LeadForge,Twitter / X Ads,x,paid_social,leadforge_launch_2026q2,https://boldguide.io/leadforge/?utm_source=x&utm_medium=paid_social&utm_campaign=leadforge_launch_2026q2
+LeadForge,Reddit Ads,reddit,paid_social,leadforge_launch_2026q2,https://boldguide.io/leadforge/?utm_source=reddit&utm_medium=paid_social&utm_campaign=leadforge_launch_2026q2
+LeadForge,Google Ads,google,cpc,leadforge_clearbit_alt_2026q2,https://boldguide.io/leadforge/?utm_source=google&utm_medium=cpc&utm_campaign=leadforge_clearbit_alt_2026q2
+LeadForge,IndieHackers,indiehackers,organic_social,leadforge_launch_2026q2,https://boldguide.io/leadforge/?utm_source=indiehackers&utm_medium=organic_social&utm_campaign=leadforge_launch_2026q2
+LeadForge,Hacker News,hn,organic_social,leadforge_launch_2026q2,https://boldguide.io/leadforge/?utm_source=hn&utm_medium=organic_social&utm_campaign=leadforge_launch_2026q2
+LeadForge,Cold email outreach,email,outbound,leadforge_outbound_2026q2,https://boldguide.io/leadforge/?utm_source=email&utm_medium=outbound&utm_campaign=leadforge_outbound_2026q2
+,,,,,
+ADHD Brain Unlock,Direct,,,,https://boldguide.io/adhd150prompts/
+ADHD Brain Unlock,Facebook Ads,facebook,paid_social,adhd_launch_2026q2,https://boldguide.io/adhd150prompts/?utm_source=facebook&utm_medium=paid_social&utm_campaign=adhd_launch_2026q2
+ADHD Brain Unlock,Instagram Ads,instagram,paid_social,adhd_launch_2026q2,https://boldguide.io/adhd150prompts/?utm_source=instagram&utm_medium=paid_social&utm_campaign=adhd_launch_2026q2
+ADHD Brain Unlock,TikTok Ads,tiktok,paid_social,adhd_launch_2026q2,https://boldguide.io/adhd150prompts/?utm_source=tiktok&utm_medium=paid_social&utm_campaign=adhd_launch_2026q2
+ADHD Brain Unlock,Pinterest Ads,pinterest,paid_social,adhd_launch_2026q2,https://boldguide.io/adhd150prompts/?utm_source=pinterest&utm_medium=paid_social&utm_campaign=adhd_launch_2026q2
+ADHD Brain Unlock,Reddit (r/ADHD),reddit,organic_social,adhd_launch_2026q2,https://boldguide.io/adhd150prompts/?utm_source=reddit&utm_medium=organic_social&utm_campaign=adhd_launch_2026q2
+ADHD Brain Unlock,YouTube description,youtube,organic_video,adhd_launch_2026q2,https://boldguide.io/adhd150prompts/?utm_source=youtube&utm_medium=organic_video&utm_campaign=adhd_launch_2026q2
+ADHD Brain Unlock,Google Ads,google,cpc,adhd_productivity_2026q2,https://boldguide.io/adhd150prompts/?utm_source=google&utm_medium=cpc&utm_campaign=adhd_productivity_2026q2
+,,,,,
+Bold Presence,Direct / business card,,,,https://boldguide.io/web-design/
+Bold Presence,Facebook Ads (EN),facebook,paid_social,boldpresence_en_2026q2,https://boldguide.io/web-design/?lang=en&utm_source=facebook&utm_medium=paid_social&utm_campaign=boldpresence_en_2026q2
+Bold Presence,Facebook Ads (ES),facebook,paid_social,boldpresence_es_2026q2,https://boldguide.io/web-design/?lang=es&utm_source=facebook&utm_medium=paid_social&utm_campaign=boldpresence_es_2026q2
+Bold Presence,Instagram Ads (EN),instagram,paid_social,boldpresence_en_2026q2,https://boldguide.io/web-design/?lang=en&utm_source=instagram&utm_medium=paid_social&utm_campaign=boldpresence_en_2026q2
+Bold Presence,Instagram Ads (ES),instagram,paid_social,boldpresence_es_2026q2,https://boldguide.io/web-design/?lang=es&utm_source=instagram&utm_medium=paid_social&utm_campaign=boldpresence_es_2026q2
+Bold Presence,Google Local Services,google,local_services,boldpresence_local_2026q2,https://boldguide.io/web-design/?utm_source=google&utm_medium=local_services&utm_campaign=boldpresence_local_2026q2
+Bold Presence,Google Business Profile,google,gbp,boldpresence_gbp_evergreen,https://boldguide.io/web-design/?utm_source=google&utm_medium=gbp&utm_campaign=boldpresence_gbp_evergreen
+Bold Presence,Nextdoor,nextdoor,paid_social,boldpresence_local_2026q2,https://boldguide.io/web-design/?utm_source=nextdoor&utm_medium=paid_social&utm_campaign=boldpresence_local_2026q2
+Bold Presence,LinkedIn (B2B),linkedin,paid_social,boldpresence_b2b_2026q2,https://boldguide.io/web-design/?utm_source=linkedin&utm_medium=paid_social&utm_campaign=boldpresence_b2b_2026q2
+Bold Presence,Business card / print,print,offline,boldpresence_print_evergreen,https://boldguide.io/web-design/?utm_source=print&utm_medium=offline&utm_campaign=boldpresence_print_evergreen
